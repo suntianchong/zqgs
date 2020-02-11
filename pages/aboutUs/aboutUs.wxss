@@ -1,0 +1,58 @@
+page{
+  background-color: #eee;
+}
+
+.BG{
+  background-color: #ffffff;
+  padding-bottom: 30rpx;
+
+}
+
+.BG2{
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  padding-bottom: 30rpx;
+}
+.title{
+  font-size: 38rpx;
+  padding: 54rpx 0rpx 24rpx 24rpx;
+  font-weight:bold;
+}
+
+.thanks{
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+
+.title2{
+  font-size: 38rpx;
+  padding: 24rpx 0rpx 24rpx 24rpx;
+  font-weight:bold;
+}
+
+.text{
+  color: #3D3D3D;
+  display: flex;
+  margin: 0rpx 24rpx 0rpx 24rpx;
+  font-size: 28rpx;
+  line-height: 38rpx;
+}
+
+.job{
+  font-size: 28rpx;
+  margin-left: 24rpx;
+  margin-top: 24rpx;
+  font-weight:bold;
+    line-height: 38rpx;
+}
+
+.copy{
+  background-color: #dedede;
+  color: #ffffff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  padding: 10rpx 15rpx 10rpx 15rpx;
+  margin-left: 15rpx;
+}

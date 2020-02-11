@@ -1,0 +1,109 @@
+.top{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.publish{
+font-size: 34rpx;
+bottom: 50rpx;
+height: 88rpx;
+width: 686rpx;
+text-align: center;
+line-height: 88rpx;
+border-radius: 44rpx;
+background-color: #3185ff;
+color: #ffffff;
+margin-top: 66rpx;
+margin-right: auto;
+margin-left: auto;
+
+
+}
+
+
+.inputContent{
+  height: 248rpx;
+  width: 700rpx;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 31rpx;
+}
+
+.inputNum{
+  font-size: 28rpx;
+  color: #dfdfdf;
+  margin-right: 25rpx;
+}
+
+.textNum{
+  color: #666666;
+}
+
+.line{
+  width: 702rpx;
+  height: 1rpx;
+  margin-top: 20rpx;
+  background-color: #000000;
+  opacity: 0.08;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin: 30rpx 4rpx 30rpx 24rpx;
+
+}
+
+/*每张图片所占容器*/
+.itemImage {
+    position: relative;
+    margin-right: 20rpx;
+}
+
+
+/*小图片*/
+.thumb {
+  position: relative;
+  /* margin-right: 20rpx; */
+  width: 140rpx;
+  height: 140rpx;
+}
+
+/*删除按钮*/
+.delete {
+	position: absolute;
+	height: 40rpx;
+	top: 0rpx;
+  right:0;
+	width: 40rpx;
+}
+
+.delete image {
+	position: absolute;
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.anonymous{
+  align-items: center;
+  display: flex;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: #666666;
+}
+
+.choseAnonymousIcon{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 32rpx;
+  margin-right: 8rpx;
+}

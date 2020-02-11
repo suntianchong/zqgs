@@ -1,0 +1,373 @@
+/* pages/my_publish/my_publish.wxss */
+page{
+  background: #eee;
+}
+.head{
+  height: 82rpx;
+  display: flex;
+  line-height: 82rpx;
+  justify-content: space-around;
+  background: #fff;
+  margin-bottom: 4rpx;
+}
+.head view{
+  font-size: 32rpx;
+  height: 100%;
+}
+.headSselect{
+  border-bottom: 4rpx solid #3185FF;
+  color: #3185FF;  
+}
+.title{
+  line-height: 70rpx;
+  padding-left: 28rpx;
+  font-size: 32rpx;
+  color: #3d3d3d;
+  font-weight: bold;
+}
+.box{
+  padding: 28rpx;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 2rpx;
+}
+.box::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.img_box{
+  width: 132rpx;
+  height: 132rpx;
+  overflow: hidden;
+  float: left;
+}
+.img_box image{
+  width: 100%;
+  height: 100%;
+}
+.job_info{
+  width: 100%;
+  padding-left: 152rpx;
+  box-sizing: border-box;
+}
+.house-info{
+  height: 132rpx;
+}
+.font28{
+  font-size: 28rpx;
+  color: #666;
+}
+.small_tab{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  color: #999;
+}
+.house-small-tab{
+  margin-right: 24rpx;
+}
+.del{
+  color: #3d3d3d;
+}
+
+.every_tab{
+  display: flex;
+  align-items: center;
+}
+
+.every_tab view{
+  float: left;
+}
+.del_rent{
+  float: right;
+}
+.small_tab>view::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.small_tab_box>image{
+width: 24rpx;
+height: 24rpx;
+margin-right: 10rpx;
+}
+.info_title{
+  font-weight: bold;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4rpx;
+}
+.house_type{
+  width: 86rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  background: #FFCE91;
+  color: #fff;
+  font-size: 28rpx;
+  
+}
+
+
+.noRankListImage{
+  width: 244rpx;
+  height: 287rpx;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 220rpx;
+}
+
+
+.noRankListTip{
+  font-size: 30rpx;
+  color: #747373;
+  text-align: center;
+  margin: 20rpx;
+}
+
+/*求租页面样式*/
+.rent-view{
+  padding: 28rpx;
+  background: #fff;
+  width: 714rpx;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 2rpx;
+}
+
+.page-title{
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-title{
+  width: 64rpx;
+  font-size: 32rpx;
+  color: #999999;
+}
+.title-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 8rpx;
+  align-items: center;
+  /* width: 513rpx; */
+}
+.title-tag1{
+  display: flex;
+    height: 40rpx;
+  line-height: 40rpx;
+  justify-content: flex-start; 
+  align-items: center;
+  border: 1px solid rgba(49,133,255,0.50);
+
+  font-size: 24rpx;
+  color: #3185FF;
+  letter-spacing: 0;
+ padding: 0rpx 24rpx 0rpx 24rpx;
+  margin: 0rpx 8rpx;
+} 
+.title-tag2{
+  display: flex;
+  height: 36rpx; 
+  line-height: 36rpx;
+  justify-content: flex-start;
+  align-items: center;
+  background: #FFF1E0;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  color: #FF662E;
+  letter-spacing: 0;
+  padding: 0 10rpx;
+  margin: 0 10rpx;
+}
+.content-loc{
+  margin-left: 24rpx; 
+}
+.content-loc-img{
+  width: 24rpx;
+  height: 24rpx;
+}
+.content-text{
+  margin-left: 13rpx;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+.rent-action{
+  padding-left: 146rpx;
+}
+
+
+.rent-action2{
+  position: absolute;
+  right: 24rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rentContent{
+  position: relative;
+  margin-right: auto;
+  padding: 24rpx;
+  margin-left: auto;
+  background-color: #ffffff;
+  font-size: 32rpx;
+  margin-bottom: 2rpx;
+}
+
+.rentContentTip{
+  color: #B8C0CC;
+}
+
+.rentContentColumn_right{
+  position: absolute;
+  left: 420rpx;
+  display: flex;
+}
+
+.rentContentTipContent{
+  color: #525A66;
+}
+
+.house_place{
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 12rpx;
+}
+
+.rentContentColumn1{
+  display: flex;
+  font-size: 32rpx;
+  align-items: center; 
+
+}
+
+.company{
+  height: 36rpx;
+  margin-right: 12rpx;
+  padding: 4rpx 10rpx 4rpx 10rpx;
+  background: #FFF1E0;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  text-align: center;
+  color: #FF662E;
+  letter-spacing: 0;
+  line-height: 36rpx;
+}
+
+
+
+
+.house-rent{
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5rpx;
+  padding-top: 24rpx;
+  margin-bottom: 2rpx;
+  padding-bottom: 24rpx;
+}
+.houseImg{
+  width: 220rpx;
+  border-radius: 8rpx;
+  height: 186rpx;
+  margin-left: 24rpx;
+  position: relative;
+}
+
+ .housrMsg{
+  width: 482rpx;
+  margin-left: 18rpx;
+  position: relative;
+}
+
+ .houseName{
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #525A66;
+  letter-spacing: 0;
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.houseFeature{
+  color: #7A8799;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+
+ .houseCompany{
+  height: 36rpx;
+  margin-top: 12rpx;
+  display: flex
+}
+
+.company{
+  height: 36rpx;
+  margin-right: 12rpx;
+  padding: 4rpx 10rpx 4rpx 10rpx;
+  background: #FFF1E0;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  text-align: center;
+  color: #FF662E;
+  letter-spacing: 0;
+  line-height: 36rpx;
+}
+
+.houseBottom{
+  height: 40rpx;
+  margin-top:17rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+ .houseBottom image{
+  width: 26rpx;
+  height: 26rpx;
+}
+ .houseBottom .housePlace{
+  width: 270rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 28rpx;
+  margin-left: 13rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ .houseRent{
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #FF4230;
+  letter-spacing: 0;
+  position: absolute;
+  right: 24rpx;
+}
+

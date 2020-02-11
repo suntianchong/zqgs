@@ -1,0 +1,8 @@
+<view class="page-container">
+  <view class="page-section">
+    <map
+      id="myMap" class='map-view' latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" 
+ show-location
+    ></map>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_签到福利</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="102.909443%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF8787" offset="0%"></stop>
+            <stop stop-color="#FF4F4F" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="25" y="20" width="38" height="48" rx="2"></rect>
+        <filter x="-13.2%" y="-10.4%" width="136.8%" height="129.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.8   0 0 0 0 0.160784314   0 0 0 0 0.160784314  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_关键字搜索-copy" transform="translate(-613.000000, -278.000000)">
+            <g id="金刚区" transform="translate(0.000000, 232.000000)">
+                <g id="Group-8" transform="translate(601.000000, 46.000000)">
+                    <g id="ic_签到福利" transform="translate(12.000000, 0.000000)">
+                        <circle id="Oval-2-Copy-3" fill="url(#linearGradient-1)" cx="44" cy="44" r="44"></circle>
+                        <g id="Rectangle-21">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <path d="M43.9850283,44.8703358 L39.5916971,47.1800467 C39.3472748,47.3085471 39.0449613,47.2145738 38.9164609,46.9701515 C38.8652913,46.8728213 38.847634,46.7613373 38.8662224,46.6529584 L39.705274,41.7609123 L36.1509944,38.2963459 C35.9532526,38.1035953 35.9492065,37.7870387 36.1419571,37.5892969 C36.2187114,37.5105551 36.3192826,37.4593115 36.4281011,37.4434992 L41.3399947,36.7297593 L43.5366603,32.2788287 C43.6588714,32.0312018 43.9586844,31.9295323 44.2063112,32.0517435 C44.3049175,32.1004086 44.3847313,32.1802224 44.4333964,32.2788287 L46.630062,36.7297593 L51.5419556,37.4434992 C51.815228,37.483208 52.0045687,37.7369295 51.9648599,38.0102019 C51.9490477,38.1190204 51.8978041,38.2195916 51.8190623,38.2963459 L48.2647827,41.7609123 L49.1038343,46.6529584 C49.1505148,46.9251267 48.9677208,47.1836046 48.6955526,47.2302851 C48.5871738,47.2488736 48.4756898,47.2312162 48.3783595,47.1800467 L43.9850283,44.8703358 Z" id="Star" fill="#FF5F5F"></path>
+                        <rect id="Rectangle-22" fill="#FF9595" x="35" y="54" width="18" height="3" rx="1.5"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

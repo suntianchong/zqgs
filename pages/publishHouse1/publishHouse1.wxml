@@ -1,0 +1,233 @@
+<view class='areaMarkLayer' wx:if="{{cityAreaDisplay}}" style='' bindtap='selectArea'></view>
+
+<view class='top'>
+
+  <view class='topTip' wx:if="{{publishTypeIndex==0}}">请填写你的房源信息</view>
+  <view class='topTip' wx:if="{{publishTypeIndex==1}}">请填写你的求租信息</view>
+<view class='change' wx:if='{{showTab}}'>
+    <view class='changeContainer'>
+      <view class="{{publishTypeIndex == index ? 'selected' : 'house'}}" wx:for="{{publishTypeArr}}" wx:key="{{index}}" wx:for-item="item" data-index='{{index}}' bindtap='chooseClick'>{{item}}
+      </view>
+    </view>
+  </view>
+</view> 
+
+<!-- *************************房源发布 ****************************-->
+<view wx:if="{{publishTypeIndex==0}}">
+  <view class='column'>
+    <view class='columnleft'>类型</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{tenancyTypeIndex==0? 'choseItemSelect' : 'choseItem'}}" bindtap='choseTenancyType' data-publishtype="FY" data-index="0">合租</view> 
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{tenancyTypeIndex==1? 'choseItemSelect' : 'choseItem'}}" bindtap='choseTenancyType' data-publishtype="FY" data-index="1">整租</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>户型</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{houseTypeIndex==0? 'choseItemSelect' : 'choseItem'}}" bindtap='chosehouseType' data-index="0">一室</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{houseTypeIndex==1? 'choseItemSelect' : 'choseItem'}}" bindtap='chosehouseType' data-index="1">二室</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{houseTypeIndex==2? 'choseItemSelect' : 'choseItem'}}" bindtap='chosehouseType' data-index="2">三室</view>
+      </view>
+      <view class='choseItemWidth'>
+        <view class="{{houseTypeIndex==3? 'choseItemSelect' : 'choseItem'}}" bindtap='chosehouseType' data-index="3">四室+</view>
+      </view>
+    </view>
+  </view>
+
+  <picker bindchange="choseCity" value="{{cityIndex}}" data-publishtype="FY" range="{{cityArray}}">
+    <view class='column'>
+      <view class='columnleft'>城市</view>
+      <view class='columnright2' data-index="0" >
+        <view style='margin-left:20rpx;'>{{city}}</view>
+        <image class='rowRight'  src='../../images/row_right.png'></image>
+      </view>
+    </view>
+  </picker>
+
+
+  <view class='column'>
+    <view class='columnleft'>区域</view>
+    <view class='columnright2' bindtap='chooseCityArea'  data-publishtype="FY" >
+      <view style='margin-left:20rpx;'>{{cityArea}}</view>
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+
+
+  <view class='areaDetail' wx:if="{{cityAreaDisplay}}">
+    <view class='areaDetailLeft'>
+      <view  wx:for='{{cityAreaArr}}'  class="areaChoose {{cityAreaArrIndex == index?'choose':''}}"  style='margin-top:30rpx;' bindtap='chooseArea' data-publishtype="FY"   data-index="{{index}}"  wx:if="{{index%2 ==0 }}">  {{item}}</view>
+    </view>
+    <view class='areaDetailRight'>
+      <view  wx:for='{{cityAreaArr}}'  class="areaChoose {{cityAreaArrIndex == index?'choose':''}}"  style='margin-top:30rpx;'  bindtap='chooseArea' data-publishtype="FY"   data-index="{{index}}"  wx:if="{{index%2 !=0 }}">  {{item}}</view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>位置</view>
+    <view class='columnright2' bindtap='openMap'  data-publishtype="FY" >
+      <view style='margin-left:20rpx;'>{{addressName}}</view>
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+
+  <view class='column'>
+    <view class='columnleft'>租金</view>
+    <view class='columnright2'>
+      <input style='width:382rpx;margin-left:20rpx;' placeholder="输入租金" type="number" bindinput="rentFee" data-publishtype="FY"  value='{{rentFee}}'   placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+      <view style='color:3d3d3d;font-size:30rpx;margin-right:20rpx;'>元/月</view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>联系方式</view>
+    <view class='columnright2'>
+      <input style='width:250rpx;margin-left:20rpx;'  value='{{contact}}'  placeholder="输入联系方式" bindinput="contact"  data-publishtype="FY"   placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+      <view style='display:flex;margin-right:20rpx;'>
+        <view style='display:flex;align-items:center;margin-right:20rpx;' bindtap='choseContactType'  data-index="weChat">
+          <image class='contactIcon' wx:if="{{choseContactType=='weChat'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType=='teleNum'}}"  src='../../images/contact_no_select.png'></image>
+          <view>微信</view>
+        </view>
+        <view style='display:flex;align-items:center;' bindtap='choseContactType'  data-index="teleNum">
+          <image class='contactIcon' wx:if="{{choseContactType=='teleNum'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType=='weChat'}}"  src='../../images/contact_no_select.png'></image>
+          <view>电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='nextStep' bindtap='nextStep' data-publishtype="FY" >下一步</view>
+</view>
+
+
+
+<!-- *************************求租发布 ****************************-->
+<view wx:if="{{publishTypeIndex==1}}">
+
+  <picker bindchange="choseEnterTime" mode="date" value="{{date}}" start="{{nowTime}}" end="{{getNowDayPlusYear}}">
+    <view class='column'>
+      <view class='columnleft'>入住时间</view>
+      <view class='columnright2' >
+        <view style='margin-left:20rpx;'>{{enterTime}}</view>
+        <image class='rowRight'  src='../../images/row_right.png'></image>
+      </view>
+    </view>
+  </picker>
+
+  <view class='column'>
+    <view class='columnleft'>求租类型</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{tenancyTypeIndex2==0? 'choseItemSelect' : 'choseItem'}}" bindtap='choseTenancyType'  data-publishtype="QZ" data-index="0">合租</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{tenancyTypeIndex2==1? 'choseItemSelect' : 'choseItem'}}" bindtap='choseTenancyType' data-publishtype="QZ" data-index="1">整租</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='column' wx:if="{{tenancyTypeIndex2==0}}">
+    <view class='columnleft'>性别要求</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{sexTypeIndex==0? 'choseItemSelect' : 'choseItem'}}" bindtap='choseSexType' data-index="0" style='width:140rpx;'>限男生</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{sexTypeIndex==1? 'choseItemSelect' : 'choseItem'}}" bindtap='choseSexType' data-index="1"  style='width:140rpx;'>限女生</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{sexTypeIndex==2? 'choseItemSelect' : 'choseItem'}}" bindtap='choseSexType' data-index="2"  style='width:162rpx;'>男女不限</view>
+      </view>
+    </view>
+  </view>
+
+  <picker bindchange="choseCity" value="{{cityIndex}}" data-publishtype="QZ"  range="{{cityArray}}">
+    <view class='column'>
+      <view class='columnleft'>城市</view>
+      <view class='columnright2' data-index="0" >
+        <view style='margin-left:20rpx;'>{{city2}}</view>
+        <image class='rowRight'  src='../../images/row_right.png'></image>
+      </view>
+    </view>
+  </picker>
+
+  <view class='column'>
+    <view class='columnleft'>区域</view>
+    <view class='columnright2' bindtap='chooseCityArea' data-publishtype="QZ">
+      <view style='margin-left:20rpx;'>{{cityArea2}}</view>
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+    <view class='areaDetail' wx:if="{{cityAreaDisplay}}">
+    <view class='areaDetailLeft'>
+      <view  wx:for='{{cityAreaArr}}'  class="areaChoose {{cityAreaArrIndex2 == index?'choose':''}}"  style='margin-top:30rpx;' bindtap='chooseArea'  data-publishtype="QZ"  data-index="{{index}}"  wx:if="{{index%2 ==0 }}">  {{item}}</view>
+    </view>
+    <view class='areaDetailRight'>
+      <view  wx:for='{{cityAreaArr}}'  class="areaChoose {{cityAreaArrIndex2 == index?'choose':''}}"  style='margin-top:30rpx;'  bindtap='chooseArea'  data-publishtype="QZ"  data-index="{{index}}"  wx:if="{{index%2 !=0 }}">  {{item}}</view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>求租地点</view>
+    <view class='columnright2' bindtap='openMap'  data-publishtype="QZ">
+      <view style='margin-left:20rpx;'>{{addressName2}}</view>
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>意向租金</view>
+    <view class='columnright2' >
+      <input style='width:382rpx;margin-left:20rpx;' placeholder="输入意向租金" type="number" bindinput="rentFee"  data-publishtype="QZ"  value='{{rentFee2}}'  placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+      <view style='color:3d3d3d;font-size:30rpx;margin-right:20rpx;'>元/月</view>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>联系方式</view>
+    <view class='columnright2' >
+      <input style='width:250rpx;margin-left:20rpx;'  value='{{contact2}}'  placeholder="输入联系方式" bindinput="contact"   data-publishtype="QZ"  placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+      <view style='display:flex;margin-right:20rpx;'>
+        <view style='display:flex;align-items:center;margin-right:20rpx;' bindtap='choseContactType2'  data-index="weChat">
+          <image class='contactIcon' wx:if="{{choseContactType2=='weChat'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType2=='teleNum'}}"  src='../../images/contact_no_select.png'></image>
+          <view>微信</view> 
+        </view>
+        <view style='display:flex;align-items:center;' bindtap='choseContactType2'  data-index="teleNum">
+          <image class='contactIcon' wx:if="{{choseContactType2=='teleNum'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType2=='weChat'}}"  src='../../images/contact_no_select.png'></image>
+          <view>电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+ 
+ 
+  <view class='nextStep' bindtap='nextStep' data-publishtype="QZ"  >下一步</view>
+</view>
+
+
+  
+
+
+
+<view class='hidePage' wx:if="{{authorizeLocal==false}}"  ></view>
+
+<button plain="true"  wx:if="{{authorizeLocal==false}}"  class='authBut' style="border:0;height:520rpx;"  open-type="openSetting" bindopensetting="authorizeLocal"> 
+  <image class='authorize' src='../img/authorizeLocal.png'></image>
+</button> 

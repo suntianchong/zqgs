@@ -1,0 +1,112 @@
+<view class="page-container">
+  <view class='banner-view'>
+    <swiper indicator-dots="{{false}}" class='banner-swiper'
+    autoplay="{{true}}" interval="10000" duration="500" bindchange="bannerChanged">
+      <block wx:for="{{detail.housePic}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" bindtap='previewImg' data-current-src="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='banner-num'>{{currentBanner}}/{{bannerNum}}</view>
+  </view>
+  <view class='house-title' bindtap='showActionSheet'>
+  {{detail.title}}
+  </view> 
+  <view class='page-head'> 
+    <view class='image-view'>
+        <image wx:if='{{userInfo.isAdmin != 1}}' class='head-atvar' src='{{userInfo.userPic}}'></image>
+        <image  wx:if='{{userInfo.isAdmin == 1}}'  class='head-atvar'  src='../../images/admin_pic.jpg' ></image>
+        <view wx:if='{{userInfo.sex == "男生"}}' >
+          <image wx:if='{{userInfo.isAdmin != 1}}'  class='head-sex' src='../../images/man.png' ></image>
+          <image wx:if='{{userInfo.isAdmin == 1}}'  class='head-sex' src='../../images/admin.png' ></image>
+        </view>
+        <view wx:if='{{userInfo.sex == "女生"}}'>
+          <image wx:if='{{userInfo.isAdmin != 1}}'  class='head-sex' src='../../images/woman.png'></image>
+          <image wx:if='{{userInfo.isAdmin == 1}}'  class='head-sex' src='../../images/admin.png' ></image>
+        </view>
+    </view>
+    <view class='head-desc head-module1'>
+      <view wx:if='{{userInfo.isAdmin != 1}}'  class='head-nickname'>{{userInfo.nickName}}</view>
+      <view  wx:if='{{userInfo.isAdmin == 1}}' class='head-nickname'>{{userInfo.adminName}}</view>
+      <view   wx:if='{{userInfo.isAdmin != 1}}' class='head-text'>{{userInfo.sex}}<text wx:if='{{!userInfo.company}}'>·{{userInfo.university}}</text> <text wx:if='{{userInfo.company}}'>·{{userInfo.company}}</text></view>
+
+      <view  wx:if='{{userInfo.isAdmin == 1}}'  class='head-text'>职前公社管理员</view>
+    </view>
+    <view class='head-desc head-module2'>
+      <view class='head-text'>{{pubText}}</view>
+    </view>
+  </view>
+  <view class='split-line'></view>
+  <view class='house-detail'>
+    <view class='house-block'>
+      <view class='house-block1'>{{detail.tenancyType}}</view>
+      <view class='house-block2'>类型</view>
+    </view>
+    <view class='house-block'>
+      <view class='house-block1'>{{detail.houseType}}</view>
+      <view class='house-block2'>户型</view>
+    </view>
+    <view class='house-block'>
+      <view class='house-block3'>{{detail.rentFee}}元/月</view>
+      <view class='house-block2'>租金</view>
+    </view>
+  </view>
+  <block wx:if="{{detail.conmanyLabel.length > 0}}">
+    <view class='house-publish-title'>
+      <view class='house-publish-title1'>公司标签</view>
+      <view class='house-publish-title2'>适合以下公司的小伙伴居住~</view>
+    </view>
+    <view class='house-publish-tag'>
+      <view class='title-tag2'  wx:for="{{detail.conmanyLabel}}" wx:key="*this">#{{item}}</view>
+    </view>
+  </block>
+  <view class='house-publish-title'>
+    <view class='house-publish-title1'>位置</view>
+    <view class='title-content' bindtap='goLocMap'>
+        <image class='content-loc-img' src='../../images/place.png'></image>
+        <view class='content-text'>{{detail.address}}（附近）</view>
+    </view>
+    <image class='right-arrow' src='../../images/row_right.png'></image>
+  </view>
+  <view class='split-line margin-0'></view>
+  <view class='content-main'>
+      <text>{{detail.detail}}</text>
+  </view>
+  <view class='page-tips'>
+    <view class='tips-title'>-温馨提示-</view>
+    <view class='tips-content'>
+      <text>本房源信息由发布者自行发布，仅代表其个人意志，与职前公社无关。本平台仅提供房源信息展示空间，不保证房源信息的真实、合法、有效。请您与发布者确认并核实房源信息等相关情况。温馨提醒您，在看房及租房时注意人身安全与财产安全，后续相关问题请您和发布者协商。</text>
+    </view>
+  </view>
+  <view wx:if="{{sharedIn}}" class='float-div' bindtap='goIndex'>更多房源</view>
+  <view class='desc tab-bar'>
+    <view class='tab-bar-block block-width' bindtap='collectHouse'>
+      <image wx:if="{{!hasCollect}}"  src='../img/ic_collect.png' class='tab-img'></image>
+      <image wx:if="{{hasCollect}}"  src='../img/had_collect.png' class='tab-img'></image>
+      <text class='tab-bar-text'>收藏</text>
+    </view>
+    <button class='cuz-btn' open-type='share' plain="true">
+      <!-- <view class='tab-bar-block block-width'> -->
+          <image src='../img/ic_share.png' class='tab-img btn-img'></image>
+          <text class='tab-bar-text'>分享</text>
+      <!-- </view> -->
+    </button>
+    <view class='tab-bar-block block-width' bindtap='getPoster'>
+      <image src='../img/ic_moments.png' class='tab-img'></image>
+      <text class='tab-bar-text'>朋友圈</text>
+    </view>
+    <view class='tab-bar-block block-width' bindtap='reportError'>
+      <image src='../img/ic_report.png' class='tab-img'></image>
+      <text class='tab-bar-text'>举报</text>
+    </view>
+    <view class='send-btn' bindtap='sendMail'>
+      <text class='send-text'>现在联系</text>
+
+      <view class="triangle" wx-if="{{isAdmin}}">
+        <view  style='color:#ffffff;' class='clickNumber'>{{detail.clickNumber}}</view>
+      </view> 
+
+    </view>
+  </view>
+</view>

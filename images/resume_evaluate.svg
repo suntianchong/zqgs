@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_简历评估</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#22DFAA" offset="0%"></stop>
+            <stop stop-color="#14CA78" offset="100%"></stop>
+        </linearGradient>
+        <path d="M27,20 L44,20 L55.1329914,20 C55.6514178,20 56.1495885,20.2013071 56.5224721,20.5614788 L62.3894807,26.2284757 C62.7796511,26.6053448 63,27.1245366 63,27.6669969 L63,44 L63,66 C63,67.1045695 62.1045695,68 61,68 L27,68 C25.8954305,68 25,67.1045695 25,66 L25,22 C25,20.8954305 25.8954305,20 27,20 Z" id="path-2"></path>
+        <filter x="-13.2%" y="-10.4%" width="136.8%" height="129.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.16   0 0 0 0 0.8   0 0 0 0 0.533333333  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_关键字搜索-copy" transform="translate(-238.000000, -278.000000)">
+            <g id="金刚区" transform="translate(0.000000, 232.000000)">
+                <g id="Group-5" transform="translate(226.000000, 46.000000)">
+                    <g id="ic_简历评估" transform="translate(12.000000, 0.000000)">
+                        <circle id="Oval-2-Copy" fill="url(#linearGradient-1)" cx="44" cy="44" r="44"></circle>
+                        <g id="Rectangle-17">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <rect id="Rectangle-18" fill="#17CF83" opacity="0.600000024" x="35" y="53" width="18" height="3" rx="1.5"></rect>
+                        <circle id="Oval-9" fill="#17CF83" cx="44" cy="40" r="7"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

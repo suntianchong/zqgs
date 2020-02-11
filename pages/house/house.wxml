@@ -1,0 +1,232 @@
+
+<view class="head" >
+  <image src='http://bmob-cdn-20509.b0.upaiyun.com/2018/09/16/9d4a2ec440802d9880b30b264492180c.jpg'  class='house_bg'></image>
+
+  <view class='top_house_bg'>
+ 
+    
+      <image class='work_Search_address' src='../../images/work_search_address.svg'></image>
+      <view class='city' bindtap='chooseCity'>
+        {{city}}
+        <image class='row_right' src='../../images/row_right_white.svg'></image>
+      </view>
+
+      <view class="{{!searchText?'searchColumn':'searchColumn2'}}" bindtap='openSearchPage'>
+        <image class='work_search' src='../../images/work_search.svg'></image> 
+        <view class='input_search' wx:if="{{!searchText}}">请搜索公司名称或地点关键词</view>
+        <view class='input_search' wx:if="{{searchText}}" >{{searchText}}</view>
+      </view> 
+      <view class='cancelSearch' wx:if="{{searchText}}"  bindtap='cancelSearch' >取消</view>
+    <image src='../../images/city_bubble.png'  wx:if="{{showCityBubble=='true'}}"  bindtap='cityBubble' class='cityBubble'></image> 
+
+    <view class='head_title1'>同学·同事·同龄人</view>
+    <view class='head_title2'>互联网实习生活不再孤单</view> 
+  </view>
+</view> 
+
+<view wx:if="{{attractTop==true}}" style='height:102rpx;width:100%;'></view>
+
+<!-- 检索 -->
+<view  class="{{attractTop==false?'retrieval':'retrieval_top'}}"  >
+<view class='tendency' bindtap='rotaTriangle' data-rotatype="tendency">
+<view><text class="{{textColor == false ? '':'color'}}">{{tendencyName}}</text></view>
+<view class='downImg'><image  wx:if="{{tendencyDisplay}}" src='../../images/up.png' class='down'></image></view>
+<view class='downImg'><image  wx:if="{{!tendencyDisplay}}" src='../../images/down.png' class='down'></image></view>
+</view>
+<view class='area'  bindtap='rotaTriangle' data-rotatype="area">
+<view><text class="{{textColor1 == false ? '':'color1'}}">{{areaName}}</text></view>
+<view class='downImg'><image  wx:if="{{areaDisplay}}" src='../../images/up.png' class='down'></image></view>
+<view class='downImg'><image  wx:if="{{!areaDisplay}}" src='../../images/down.png' class='down'></image></view>
+</view> 
+<view class='rent' bindtap='rotaTriangle' data-rotatype="rentFee">
+<view><text>{{rentName}}</text></view>
+<view class='downImg'><image  wx:if="{{rentDisplay}}" src='../../images/up.png' class='down'></image></view>
+<view class='downImg'><image  wx:if="{{!rentDisplay}}" src='../../images/down.png' class='down'></image></view>
+</view>
+
+<view class='change' bindtap='chooseClick' > 
+  <view class='changeContainer'>
+    <view class="{{publishTypeIndex == index ? 'selected' : 'house'}}" wx:for="{{publishTypeArr}}" wx:for-item="item" data-index='{{index}}' wx:key='item'>{{item}}</view>
+  </view>
+</view>
+
+
+
+<!-- 弹出框 -->
+<view  class='tendencyDetail' catchtouchmove='no_move'  wx:if="{{tendencyDisplay}}">
+<view class="tendencyChoose {{chooseTendency == index?'publishTypeArr':''}}" wx:for='{{tendency}}' data-index="{{index}}" bindtap='chooseTendency' wx:key="item">{{item}}</view>
+</view>
+<view class='areaDetail' catchtouchmove='no_move'  wx:if="{{areaDisplay}}">
+  <view class='areaDetailLeft'> 
+    <view  wx:for='{{area}}' class="areaChoose {{chooseArea == index?'publishTypeArr':''}}"   style='margin-top:30rpx;' bindtap='chooseArea'   data-index="{{index}}"  wx:if="{{index%2 ==0 }}">  {{item}}</view>
+  </view>
+  <view class='areaDetailRight'>
+    <view  wx:for='{{area}}' class="areaChoose {{chooseArea == index?'publishTypeArr':''}}"  style='margin-top:30rpx;'  bindtap='chooseArea'   data-index="{{index}}"  wx:if="{{index%2 !=0 }}">  {{item}}</view>
+  </view>
+  
+</view>
+<view class='rentDetail' catchtouchmove='no_move'  wx:if="{{rentDisplay}}">
+<view class="rentChoose {{chooseRent == index?'publishTypeArr':''}}" wx:for='{{rents}}' data-index="{{index}}" bindtap='chooseRent' wx:key="item">{{item}}</view>
+</view>
+
+</view>
+
+<image src='../../images/house_type_bubble.png'   wx:if="{{showHouseTypeBubble=='true'}}" bindtap='houseTypeBubble' class='houseTypeBubble'></image>
+
+
+<!-- 遮罩层 -->
+<view class='tendencyMarkLayer' catchtouchmove='no_move' wx:if="{{tendencyDisplay}}" data-rotatype="tendency" bindtap='rotaTriangle'></view>
+<view class='areaMarkLayer'  catchtouchmove='no_move'  wx:if="{{areaDisplay}}" data-rotatype="area" bindtap='rotaTriangle'></view>
+<view class='rentMarkLayer'  catchtouchmove='no_move'  wx:if="{{rentDisplay}}" data-rotatype="rentFee"bindtap='rotaTriangle'></view>
+
+
+
+ 
+
+<!-- 房源 -->
+<view class='main-house' wx:if="{{publishTypeIndex==0}}">
+<view class='noSearchResult'  wx:if="{{noRentSearchResult}}">
+    <image src='../img/nothing.png' class='noRankListImage'></image>
+    <view class='noRankListTip' >没有在{{city}}检索到相关信息</view>
+    <view class='noRankListTip'>建议重新搜索，或重置筛选条件</view>
+    <!-- <view class=''>重置</view> --> 
+</view>
+
+<view class='house-rent' wx:for='{{house}}' wx:key='item' data-index='{{index}}' bindtap='goHousedetail'>
+
+   <view class='userInfoColumn'>
+      <view style='position: relative;'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}'  src='{{item.publisher.userPic}}' class='userPic'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}'  src='../../images/admin_pic.jpg' class='userPic'></image>
+        <block wx:if='{{item.publisher.sex == "男生"}}'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}' src='../../images/man.png' class='sex'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}' src='../../images/admin.png' class='sex'></image>
+        </block>
+        <block wx:if='{{item.publisher.sex == "女生"}}'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}' src='../../images/woman.png' class='sex'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}' src='../../images/admin.png' class='sex'></image>
+        </block>
+      </view>
+
+      <view class='userInfoColumnRight'>
+        <view class='userInfoColumnRightTop'>
+          <view wx:if='{{item.publisher.isAdmin != 1}}' class='userName'>{{item.publisher.nickName}}</view> 
+          <view wx:if='{{item.publisher.isAdmin == 1}}' class='userName'>{{item.publisher.adminName}}</view>
+          <view class='publishTime'>{{item.publishTime}}</view> 
+        </view>
+        <view class='sexCompany'>{{item.publisher.sex}}<text wx:if="{{!item.publisher.company}}">·{{item.publisher.university}}</text><text wx:if="{{item.publisher.company}}">·{{item.publisher.company}}</text></view>
+      </view> 
+  </view>
+
+  <view style='display: flex;width:100%;'>
+  <image class='houseImg' src='{{item.housePic[0]}}'></image>
+  <view class='mark' wx:if="{{item.top == 1}}" style='  background: #FF2D2D;border: 1px solid #FF2D2D;'>急租</view> 
+  <view class='housrMsg'>
+  <view class='houseName'  >{{item.title}}</view>
+  <view class='houseFeature'>{{item.tenancyType}}·{{item.houseType}}</view>
+  <view class='houseCompany'>
+  <view class='company' wx:for='{{item.conmanyLabel}}' wx:key='item'>#{{item}}</view>
+  </view>
+  <view class='houseBottom'>
+  <image src='../img/place.svg'></image>
+  <view class='housePlace'>{{item.address}}</view>
+  <view class='houseRent'>{{item.rentFee}}元/月</view>
+  </view>
+  </view>
+  </view>
+    <view class='line1'></view>
+  </view>
+  <view style='height:16rpx;color:#999999;font-size:24rpx;padding:15rpx 0rpx 15rpx 0rpx;' wx:if="{{more}}">没有更多了</view>
+</view>
+
+
+
+
+
+<!-- 求租 -->
+<view class='main-rent' wx:if="{{publishTypeIndex==1}}">
+
+
+  <view class='noSearchResult'  wx:if="{{noRentSearchResult}}">
+    <image src='../img/nothing.png' class='noRankListImage'></image>
+    <view class='noRankListTip' >没有在{{city}}检索到相关信息</view>
+    <view class='noRankListTip'>建议重新搜索，或重置筛选条件</view>
+  </view>
+
+<!-- 每条求组信息 -->
+<view class='rent-house' wx:for='{{rent}}' wx:key='item' bindtap='goRentdetail' data-index='{{index}}'>
+<!-- 头部 -->
+  <view class='userInfoColumn'>
+      <view style='position: relative;'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}'  src='{{item.publisher.userPic}}' class='userPic'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}'  src='../../images/admin_pic.jpg' class='userPic'></image>
+        <block wx:if='{{item.publisher.sex == "男生"}}'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}' src='../../images/man.png' class='sex'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}' src='../../images/admin.png' class='sex'></image>
+        </block>
+        <block wx:if='{{item.publisher.sex == "女生"}}'>
+        <image wx:if='{{item.publisher.isAdmin != 1}}' src='../../images/woman.png' class='sex'></image>
+        <image wx:if='{{item.publisher.isAdmin == 1}}' src='../../images/admin.png' class='sex'></image>
+        </block>
+      </view>
+      <view class='userInfoColumnRight'>
+        <view class='userInfoColumnRightTop'>
+          <view class='userName'>{{item.publisher.nickName}}</view>
+          <view class='publishTime'>{{item.publishTime}}</view>
+        </view>
+        <view class='sexCompany'>{{item.publisher.sex}}·{{item.publisher.company}} <text wx:if="{{!item.publisher.company}}">·{{item.publisher.university}}</text></view>
+      </view> 
+  </view>
+
+
+  <view class='rentContent'>
+    <view class='triangle'></view>
+    <view class='rentContentColumn1'>
+      <view class='rentContentTip'>入住时间</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.enterTime}}</view>
+      <view class='rentContentColumn_right'>
+        <view class='rentContentTip'>求租类型</view>
+        <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.tenancyType}}</view>
+      </view>
+      
+    </view>
+    <view class='rentContentColumn1' style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>求租区域</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.cityArea}}</view>
+      <view class='rentContentColumn_right' wx:if="{{item.tenancyType=='合租'}}">
+        <view class='rentContentTip'>性别要求</view>
+        <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.sexType}}</view>
+      </view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>理想地点</view>
+      <image  src='../../images/house_place.svg' class='house_place'></image>
+      <view class='rentContentTipContent' style='width:500rpx; letter-spacing: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'>{{item.address}}</view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'  style='margin-right:12rpx;'>公司标签</view>
+      <view class='company' wx:for='{{item.conmanyLabel}}' wx:key='item'>#{{item}}</view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>意向租金</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;color:#FF4230;'>{{item.rentFee}}</view>
+    </view>
+  
+  </view>
+
+<view class='line1'></view>
+
+</view>
+<view style='height:16rpx;color:#999999;font-size:24rpx;padding:15rpx 0rpx 15rpx 0rpx;' wx:if="{{more&&rent.length!=0}}">没有更多了</view>
+</view> 
+
+
+
+
+<!-- 发布 -->
+<button plain="true" class='getUserInfo'  style="border:0;height:116rpx;"  open-type="getUserInfo" bindgetuserinfo="issue">
+  <image src='../img/fabu.png'></image>
+</button>
+
+
+

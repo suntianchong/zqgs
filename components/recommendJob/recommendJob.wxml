@@ -1,0 +1,31 @@
+<view class="recommend_box">
+  <view class="title">热门在招实习</view>
+  <view class="recommend_detail">
+    <view class='recommend_job'>
+      <view class='spin' wx:if="{{showLoading}}">
+        <spin size="large" class="ele"></spin>      
+      </view>
+      <view
+       class='recommend_item' 
+       wx:for="{{goodJob}}" 
+       wx:key="index" 
+       data-id='{{item.objectId}}'
+       catchtap='toDetail'>
+        <image 
+         class="recommend_img"
+         src="{{item.companyLogo}}"></image>
+        <view>{{item.jobName}}</view>
+      </view>
+    </view>
+    <view class='recommend_btn'>
+      <view class='btn_item'>
+        <view class='recommend_circle'></view>
+        <view catchtap='nextJob'>换一批</view>
+      </view>
+      <view class='btn_item'>
+        <view class='recommend_circle'></view>
+        <view catchtap='toMore'>了解更多</view>
+      </view>
+    </view>
+  </view>
+</view>

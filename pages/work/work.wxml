@@ -1,0 +1,146 @@
+
+  <image src='../../images/showAddBubble.png'  wx:if="{{showAddBubble=='true'}}"  bindtap='clickAddBubble' class='showAddBubble'></image> 
+
+
+<view class='greyMask' wx:if="{{showShareToast=='true'&&openShare==true}}"></view>
+
+<view class='showShareToast' wx:if="{{showShareToast=='true'&&openShare==true}}">>
+  <image class='showShareToastImg' bindtap='clickShareToastImg'     src='https://bmob-cdn-21786.bmobcloud.com/2019/03/05/a38d5458400fc4ff80cc9289ad744322.png'></image>
+  <image class='closePackageImg'  bindtap='closePackage' src='../../images/closePackageImg.png'></image>
+</view>
+
+
+
+
+<view class='searchContent'>
+  <image class='work_Search_address' src='../../images/work_search_address.svg'></image>
+  <view class='city' bindtap='selectCity'>
+    {{city}}
+    <image class='row_right' src='../../images/row_right_white.svg'></image>
+  </view>
+  <view class="{{!searchText?'searchColumn':'searchColumn2'}}" bindtap='openSearchPage'>
+    <image class='work_search' src='../../images/work_search.svg'></image>
+    <view class='input_search' wx:if="{{!searchText}}">搜索职位或公司名称</view>
+    <view class='input_search' wx:if="{{searchText}}" >{{searchText}}</view>
+  </view>
+  <view class='cancelSearch' wx:if="{{searchText}}"  bindtap='cancelSearch' >取消</view>
+</view> 
+
+
+<!-- <view class='active_area'>
+  <view class='active_area_item'>
+    <image class='active_area_item_img' src='../../images/high_job.svg'></image> 
+    <view class='active_area_item_txt'>高端实习</view>
+  </view>
+
+  <view class='active_area_item'>
+    <image class='active_area_item_img' src='../../images/resume_evaluate.svg'></image>
+    <view class='active_area_item_txt'>简历评估</view>
+  </view>
+
+  <view class='active_area_item'>
+    <image class='active_area_item_img' src='../../images/company_urgent.svg'></image>
+    <view class='active_area_item_txt'>企业急招</view>
+  </view>
+
+  <view class='active_area_item'>
+    <image class='active_area_item_img' src='../../images/sign_welfare.svg'></image>
+    <view class='active_area_item_txt'>签到福利</view>
+  </view>
+</view> -->
+
+
+<swiper class='swiper' indicator-dots="{{showSwiperDots}}"  indicator-active-color="#ff3131" autoplay="true" interval="3000" duration="1000">
+  <block wx:for="{{bannerList}}">
+    <swiper-item>
+      <image bindtap="clickBanner"  style='margin-top: {{bannerTop}}rpx;' data-index="{{index}}"   src="{{item.image}}" class="slide-image" class='bannerImg'/>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view  class="{{attractTop==false?'fliter_column':'fliter_column_top'}}" >
+  <view class='fliter_column_content'>
+    <view class='fliter_column_left'>
+      <view style='  height: 34rpx;width: 8rpx;background-color: #3185FF;margin-left: 16rpx;'></view>
+      <view style='font-size:32rpx;color:#525A66;margin-left:15rpx;'>优质实习</view>
+    </view>
+
+    <view class='fliter_column_right' bindtap='fliter'>
+      <image class='work_fliter_icon' src='../../images/work_fliter_icon.svg'></image>
+      <view style='font-size:32rpx;color:#525A66;margin-left:15rpx;'>筛选 <text style='color:#ff2d2d;'  wx:if="{{jobTypeList.length>0}}">({{jobTypeList.length}})</text> </view>
+    </view>
+  </view>
+  <view class='line1'></view>
+</view>
+
+
+<view  wx:if="{{attractTop==true}}" style='  height: 102rpx;width: 100%;'></view>
+
+  <view class='jobContent'>
+
+
+    <view class='noSearchResult'  wx:if="{{noSearchResult}}">
+      <image src='../img/nothing.png' class='noRankListImage'></image>
+        <view class='noRankListTip' >没有在{{city}}检索到相关信息</view>
+        <view class='noRankListTip'>建议重新搜索，或重置筛选条件</view>
+        <!-- <view class=''>重置</view> -->
+    </view>
+
+
+    <view class='containerList' wx:for="{{containerArr}}" data-index="{{index}}" bindtap='workDetail' wx:key="item">
+
+      <view class='jobItem'>
+        <view class='logo_content'>
+          <image src='{{item.companyLogo}}'></image>
+        </view>
+        <view class='containerList_right'>
+          <view class='containerList_right_top'>
+            <view class='containerList_right_top_jobname'>{{item.jobName}}</view>
+            <view class='label'>
+              <view class='top' wx:if="{{item.top == 1}}">急</view>
+              <view class='high' wx:if="{{item.high_quality == 1}}">优</view>
+            </view>
+            
+          </view>
+          <view class='containerList_right_middle'>
+              {{item.companyName}}
+          </view>
+          <view class='containerList_right_bottom'>
+            <view class='containerList_right_bottom_column'>
+              <view class='containerList_right_bottom_column_left'>
+                <view class='place'>
+                  <image src='../img/place.svg'></image>
+                  <view>{{item.city}}</view>
+                </view>
+
+                <view class='workTime'>
+                  <image src='../img/time.svg'></image>
+                  <view>{{item.workTime}}</view>
+                </view>
+              </view>
+
+              <view class='publishTime'>
+                  {{item.publishTime}}
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+      <view class='line2'></view>
+    </view>
+    <view class='noMore' style='height:16rpx;color:#999999;font-size:24rpx;padding:15rpx 0rpx 15rpx 0rpx;' wx:if="{{more}}">没有更多了</view> 
+  </view>
+
+
+
+<!-- 发布 -->
+<button plain="true"   class='getUserInfo'  style="border:0;height:116rpx;"  bindtap="issue">
+  <image src='../img/fabu.png'></image>
+</button>
+
+<!-- 
+ @author：张新源 
+ -->
+ 

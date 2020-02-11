@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_搜索箭头</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="二级搜索页_输入信息状态" transform="translate(-35.000000, -281.000000)" stroke="#B8C0CC" stroke-width="2">
+            <g id="Group-7" transform="translate(0.000000, 232.000000)">
+                <g id="ic_搜索箭头" transform="translate(36.000000, 50.000000)">
+                    <polyline id="Rectangle-2" stroke-linejoin="round" points="5 0 21 0 21 16"></polyline>
+                    <path d="M0,21 L21,0" id="Rectangle-2-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_高端实习</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFCE5F" offset="0%"></stop>
+            <stop stop-color="#FFA031" offset="100%"></stop>
+        </linearGradient>
+        <path d="M30.6547213,23 L56.4113828,23 C57.1081155,23 57.7546352,23.3625906 58.1179465,23.9571 L67.7726515,39.7557081 C68.2257593,40.4971573 68.1482719,41.446345 67.5809078,42.1044874 L45.047872,68.2428089 C44.3266548,69.0794208 43.0637848,69.1729668 42.2271728,68.4517496 C42.1524692,68.3873499 42.0826318,68.3175125 42.0182321,68.2428089 L19.4851964,42.1044874 C18.9178323,41.446345 18.8403448,40.4971573 19.2934526,39.7557081 L28.9481576,23.9571 C29.3114689,23.3625906 29.9579886,23 30.6547213,23 Z" id="path-2"></path>
+        <filter x="-10.2%" y="-10.9%" width="128.5%" height="130.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.8   0 0 0 0 0.522666667   0 0 0 0 0.16  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_关键字搜索-copy" transform="translate(-50.000000, -278.000000)">
+            <g id="金刚区" transform="translate(0.000000, 232.000000)">
+                <g id="Group-3" transform="translate(38.000000, 46.000000)">
+                    <g id="ic_高端实习" transform="translate(12.000000, 0.000000)">
+                        <circle id="Oval-2" fill="url(#linearGradient-1)" cx="44" cy="44" r="44"></circle>
+                        <g id="Rectangle-16">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <rect id="Rectangle-18" fill="#FFB03F" opacity="0.600000024" x="33" y="29" width="22" height="3" rx="1.5"></rect>
+                        <path d="M44.7808688,50.3753418 L50.700244,57.7745607 C51.0452535,58.2058227 50.9753321,58.835115 50.5440702,59.1801246 C50.3667572,59.321975 50.1464466,59.3992558 49.9193752,59.3992558 L38.0806248,59.3992558 C37.5283401,59.3992558 37.0806248,58.9515405 37.0806248,58.3992558 C37.0806248,58.1721843 37.1579056,57.9518738 37.299756,57.7745607 L43.2191312,50.3753418 C43.5641407,49.9440798 44.1934331,49.8741585 44.624695,50.219168 C44.6823598,50.2652998 44.734737,50.3176771 44.7808688,50.3753418 Z" id="Triangle" fill="#FFB03F" transform="translate(44.000018, 54.699628) scale(1, -1) translate(-44.000018, -54.699628) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

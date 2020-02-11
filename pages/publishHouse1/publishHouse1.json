@@ -1,0 +1,7 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于房屋坐标定位"
+    }
+  }
+}

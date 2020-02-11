@@ -1,0 +1,69 @@
+
+
+  <view><image class='top' src="{{img}}"></image>
+  </view>
+<view class='package_get'>
+  <view style='display:flex;  align-items:center;'>
+    <view class='package_get_tip'>ta的礼包获取情况</view>
+    <view class='refresh' catchtap='refresh'>点击刷新</view>
+  </view>
+  <view class='seeDetail' bindtap='seeDetail'>查看礼包详情</view>
+
+
+</view>
+
+ <view class='navigation'> 
+    <view class='noNavigation'>
+      <view class='hadNavigation' style='width:{{hadNavigationLength}}rpx'></view>
+    </view>
+</view>
+
+<view class='navigation_tip1'>
+  <view>初级礼包</view>
+  <view>中级礼包</view>
+  <view>高级礼包</view>
+</view>
+
+<view class='navigation_tip2'>
+  <view>5人助力</view>
+  <view>20人助力</view>
+  <view>50人助力</view>
+</view>
+    <view class='btn'>
+        <!-- <button class="btn1" catchtap='help' wx:if="{{!hasAssisted}}">为好友助力</button> -->
+        <button class="btn1" catchtap='help' wx:if="{{!hasAssisted}}">为好友助力</button>
+        <button class='btn1 btn_success' bindtap='finishAssist' wx:if="{{hasAssisted}}">助力成功</button>
+        <button class="btn2" bindtap='joinToo'>我也要参加</button>
+    </view>
+
+<recommendJob></recommendJob>
+
+<view class='line' ></view>
+
+<view class='txt'>
+  <view class='h'>-活动参与者正在领取-</view>
+   <view class='h1'><image  class="head" src='{{msgList[0].pic}}'/><text class='aa'>{{msgList[0].nickName}}</text><text class='a'>{{msgList[0].gift}}</text></view>
+        <view class='h1'><image  class="head" src='{{msgList[1].pic}}'/><text class='aa'>{{msgList[1].nickName}}</text><text class='a'>{{msgList[1].gift}}</text></view>
+        <view class='h1'><image  class="head" src='{{msgList[2].pic}}'/><text class='aa'>{{msgList[2].nickName}}</text><text class='a'>{{msgList[2].gift}}</text></view>
+</view>
+
+
+<!-- <view class='txt'>
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{msgList}}">
+
+      <swiper-item>
+        <view class='h1'><image  class="head" src='{{item.item1.pic}}'/><text class='aa'>{{item.item1.nickName}}</text><text class='a'>求职必备资料包</text></view>
+        <view class='h1'><image  class="head" src='{{item.item2.pic}}'/><text class='aa'>{{item.item2.nickName}}</text><text class='a'>职前公社社群资源</text></view>
+        <view class='h1'><image  class="head" src='{{item.item3.pic}}'/><text class='aa'>{{item.item3.nickName}}</text><text class='a'>职前公社成员福利</text></view>
+      </swiper-item>
+
+    </block>
+  </swiper>
+</view> -->
+
+  
+   
+<recommendRule></recommendRule>
+
+

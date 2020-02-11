@@ -1,0 +1,160 @@
+<view class='searchContent'>
+  <view class="{{!searchText?'searchColumn':'searchColumn2'}}" bindtap='openSearchPage'>
+    <view style='  margin-right: auto;margin-left: auto;display:flex;'>
+      <image class='work_search' src='../../images/work_search.svg'></image> 
+      <view class='input_search' wx:if="{{!searchText}}">输入感兴趣的关键词搜索</view>
+      <view class='input_search' wx:if="{{searchText}}" >{{searchText}}</view>
+    </view>
+    
+  </view>
+  <view class='cancelSearch' wx:if="{{searchText}}"  bindtap='cancelSearch' >取消</view>
+</view> 
+
+
+
+<view class='contentList' wx:for='{{contentList}}' >
+
+  <view style='padding:0rpx 24rpx 0rpx 24rpx;' bindtap='detail'  wx:key='item' data-index='{{index}}'>
+   
+    <view class='top'>
+      <view class='userInfoLeft'> 
+        <image wx:if='{{item.anonymous==false}}'  src='{{item.publisher.userPic}}' class='userPic'></image>
+        <image wx:if='{{item.anonymous==true}}'  src='../../images/admin_pic.jpg'  class='userPic'></image>
+        <view style='margin-left:10rpx;'>
+          <view wx:if='{{item.anonymous==false}}'  class='userName'>{{item.publisher.nickName}}</view> 
+          <view wx:if='{{item.anonymous==true}}'  class='userName'>匿名用户</view> 
+          <view class='sexCompany' wx:if='{{item.anonymous==false}}' >{{item.publisher.university}}<text wx:if="{{item.publisher.company}}">·{{item.publisher.company}}</text><text wx:if="{{item.publisher.position}}">·{{item.publisher.position}}</text></view>
+          <view class='sexCompany' wx:if='{{item.anonymous==true}}'>ta什么也不想让你看到</view>
+        </view>
+        
+      </view>
+      <view class='userInfoRight'>
+        <view class='time'>{{item.publishTime}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      {{item.content}}
+    </view>
+
+    <view class='imagesList' style='margin-left:-30rpx;'>
+      <image  wx:for="{{item.images}}" data-current-src="{{item}}" wx:key="index"  src='{{item}}' catchtap='previewImg' class='image' hover-stop-propagation='true'></image>
+    </view>
+
+    <view class='line'></view>
+
+    </view>
+
+    <view class='operate'>
+
+      <view class='like'>
+        
+        <image wx:if="{{item.hadLike!=true}}"  catchtap='like'  data-hadlike="false"   data-id="{{item.objectId}}" src='../../images/like.png'  data-index='{{index}}'  hover-stop-propagation='true'></image>
+        <image wx:if="{{item.hadLike==true}}"  catchtap='like' data-hadlike="true"    data-id="{{item.objectId}}"  src='../../images/hadLike.png' data-index='{{index}}' hover-stop-propagation='true'></image>
+        <view>{{item.likeNum}}</view>
+      </view>
+
+      <view class='comment'>
+        <image   catchtap='comment'    data-id="{{item.objectId}}" src='../../images/comment.png' hover-stop-propagation='true'></image>
+        <view>{{item.commentNum}}</view>
+      </view>
+
+      <view class='share'>
+        <image   catchtap='share'    data-id="{{item.objectId}}" src='../../images/share.png' hover-stop-propagation='true'></image>
+        <view>{{item.shareNum}}</view>
+      </view>
+    </view>
+ 
+  <view class='line2'></view>
+</view>
+
+
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+    <form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+      <form 
+        report-submit 
+        bindsubmit="getFormid">
+        <button 
+          form-type='submit'
+          class='btn'>
+          <view class='btn_scope'>
+            <form 
+              report-submit 
+              bindsubmit="getFormid">
+              <button 
+                form-type='submit'
+                open-type='share'
+                class='btn'>
+                <view class='btn_scope'>
+              <button plain="true" class='getUserInfo'  style="border:0;height:116rpx;"  open-type="getUserInfo" bindgetuserinfo="issue">
+  <image src='../img/fabu.png'></image>
+</button>
+                                  </view>
+                              </button>
+                              </form>
+                          </view>
+                        </button>
+                    </form>
+                    </view>
+                    </button>
+                </form>
+                </view>
+                </button>
+             </form>
+          </view>
+        </button>
+      </form>
+    </view>
+    </button>
+   </form>
+   </view>
+  </button>
+  </form>
+ </view>
+ </button>
+</form>

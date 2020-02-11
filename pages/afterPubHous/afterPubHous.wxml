@@ -1,0 +1,10 @@
+
+
+<image class='afterPubHous'  src='../../images/after_pub_hous.png'></image>
+<view class='tip'>发布成功</view>
+
+<view class='tip2'>你可以把帖子转发给需要的小伙伴哦~</view>
+
+<button class='bottomBlue' open-type='share' bindtap='publishHouse'>转发</button>
+
+<view class='tip3' bindtap='comeBack'>返回租房首页</view>

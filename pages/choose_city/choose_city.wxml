@@ -1,0 +1,5 @@
+<view class="container1">
+<view class='cityContainer'>
+<view class="cityName {{chooseCity == index ? 'selected' : ''}}" wx:for="{{citys}}"  wx:for-item="item"  data-index="{{index}}" bindtap='chooseCity' wx:key="item">{{item}}</view>
+</view>
+</view>

@@ -1,0 +1,109 @@
+/* pages/tipsOff/tipsOff.wxss */
+.page-container{
+  padding: 53rpx 0rpx 0rpx 55rpx;
+}
+.tip-title{
+  font-size: 32rpx;
+  color: #3D3D3D;
+  font-weight: bold;
+}
+.textarea-view{
+  margin: 30rpx 0;
+}
+.inputDetail{
+  width: 610rpx;
+  height: 182rpx;
+  background-color: #f7f7f7;
+  padding: 24rpx;
+  color: #8f8f8f;
+  font-size: 28rpx;
+}
+.textarea-view{
+  position: relative;
+  padding-right: 45rpx;
+}
+.font-length{
+  position: absolute;
+  bottom: 12rpx;
+  right: 61rpx;
+  font-size: 24rpx;
+  color: #CCCCCC;
+}
+.thumb-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thumb-view text{
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #3D3D3D;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 30rpx 4rpx 30rpx 0;
+
+}
+
+/*每张图片所占容器*/
+.itemImage {
+    position: relative;
+    margin-right: 20rpx;
+}
+
+
+/*小图片*/
+.thumb {
+  width: 160rpx;
+  height: 160rpx;
+  /* margin-right: 20rpx; */
+}
+
+/*删除按钮*/
+.delete {
+	position: absolute;
+	height: 34rpx;
+	top: 0rpx;
+  right:0;
+	width: 34rpx;
+}
+
+.delete image {
+	position: absolute;
+	width: 30rpx;
+	height: 30rpx;
+}
+.other-text{
+  margin-top: 48rpx ;
+  padding: 0rpx 55rpx 0 0rpx;
+  font-size: 24rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 128rpx;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.bottomBlue{
+  position: fixed;
+  background-color: #3185FF;
+  width: 640rpx;
+  height: 88rpx;
+  bottom: 24rpx;
+  left: 50%;
+  color: #ffffff;
+  font-size: 34rpx;
+  text-align: center;
+  transform: translate(-50%,0);
+  line-height: 88rpx;
+}

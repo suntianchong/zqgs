@@ -1,0 +1,82 @@
+
+
+
+<view class='blueBG'></view>
+<image class='blueBG2' src='../../images/main_bg.png'></image>
+
+<view class='top' bindtap='inputPerInfo'>
+  <view class='topLeft'>
+    <image class='userPic' src='{{userPic}}'></image>
+  </view> 
+
+  <view class='topRight'>
+    <view class='userInfo'>
+      <view class='userInfoTop'>
+        <view style='  position: absolute;bottom: 5rpx;display: flex;align-items: center;'>
+          <view class='nickName'>{{nickName}}</view>
+          <image class='editUserInfo' src='../../images/editUserInfo.png'></image>
+        </view>
+      </view>
+      <view class='userInfoBottom'> 
+        <view>{{headContent}}</view>
+      </view>
+    </view> 
+  </view> 
+</view>
+
+<view class='content'>
+  <view class='every' bindtap='to_publish'>
+    <view class='every_left'>
+      <image class='leftIcon' src='../img/my_publish.png'></image>
+      <view>我的发布</view>
+    </view>
+    <view class='every_right'>
+      <view>
+        发布的帖子都在这
+      </view>
+      <image  class='rightRow'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+  <view class='every' bindtap='to_collect'>
+    <view class='every_left'>
+      <image class='leftIcon' src='../img/my_collect.png'></image>
+      <view>我的收藏</view>
+    </view>
+    <view class='every_right'>
+      <view>收藏的帖子都在这</view>
+      <image class='rightRow' src='../../images/row_right.png'></image>
+    </view>
+  </view>
+  <view class='every' bindtap='goWebview'>
+    <view class='every_left'>
+      <image class='leftIcon' src='../img/my_message.png'></image>
+      <view>活动通知</view>
+      <image style='width:12rpx;height:12rpx;margin-left:20rpx;' wx:if="{{showReddot==true}}" src='../../images/reddot.png'></image>
+    </view>
+    <view class='every_right'>
+      <view>找组织点这里</view>
+      <image class='rightRow' src='../../images/row_right.png'></image>
+    </view>
+  </view>
+  <!-- <view class='every' bindtap='aboutUs'>
+    <view class='every_left'>
+      <image class='leftIcon' src='../img/my_about.png'></image>
+      <view>关于我们</view>
+    </view>
+    <view class='every_right'>
+      <view>想撩我们戳进去</view>
+      <image class='rightRow' src='../../images/row_right.png'></image>
+    </view>
+  </view> -->
+
+</view>
+
+
+<view class='hidePage' wx:if="{{authorize==false}}"  ></view>
+
+<button plain="true"  wx:if="{{authorize==false}}"  class='authBut' style="border:0;height:520rpx;"  open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> 
+  <image class='authorize' src='../img/authorize.png'></image>
+</button> 
+
+
+  <image class='openAssist' bindtap='openAssist' wx:if="{{openShare==true}}" src="{{'https://bmob-cdn-21786.bmobcloud.com/2019/03/05/3f32f681409c95d380d19e5d88d519b5.png'}}"></image>

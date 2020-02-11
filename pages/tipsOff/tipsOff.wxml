@@ -1,0 +1,25 @@
+<view class='page-container'>
+  <view class='tip-title'>
+    举报原因
+  </view>
+  <view class='textarea-view'>
+    <textarea class='inputDetail'   maxlength='-1' bindinput="inputDetail" placeholder-style="color: #BDBDBD;font-size:28rpx"  placeholder="请描述举报原因，我们将为你做保密处理。" />
+    <view class='font-length'>{{fontLength}}/100</view>
+  </view>
+  <view class="gallery">
+      <view class="itemImage" wx:for="{{tipPic}}" wx:key="*this">
+          <image class="thumb" data-current="{{item}}" src="{{item}}"></image>
+          <image class="delete" src="/images/delete_image.png" data-index="{{index}}" bindtap="delete"></image>
+      </view>
+      <view class='thumb-view' wx:if="{{picLength<4}}" bindtap="upImg">
+        <image class="thumb" src="../img/upload.png"></image>
+        <text>最多上传4张图片</text>
+      </view>
+  </view>
+  <view class='other-text'>
+   温馨提示：为了维护平台的和谐以及公平公正的氛围，我们鼓励用户举报违反国家法律法规或违法微信官方规定帖子，如发布违法、造谣、辱骂等，一经发现坚决删贴封号并保护举报人的隐私安全。
+  </view>
+  <view class='bottom'>
+    <view class='bottomBlue'  bindtap='submit'>提交</view>
+  </view>
+</view>

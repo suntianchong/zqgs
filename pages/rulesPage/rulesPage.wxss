@@ -1,0 +1,9 @@
+page{
+  background-color: #eec37b;
+}
+
+.BG{
+  width: 750rpx;
+  height: 1200rpx;
+}
+

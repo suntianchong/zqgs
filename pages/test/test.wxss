@@ -1,0 +1,24 @@
+.text_box {
+  background-color: white;
+  width: 544rpx;
+  border-radius: 10rpx;
+  border: 1px solid #e9e9e9;
+  padding-left: 28rpx;
+  font-size: 80rpx;
+  padding-top: 8rpx;
+}
+.text_box .weui-textarea {
+  width: 528rpx;
+  padding-left: 32rpx;
+  padding: 6rpx 0;
+  border-radius: 12rpx;
+}
+.textarea_btn {
+  width: 96rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  padding: 0;
+  line-height: 60rpx;
+  background-color: #f7ab21;
+  color: white;
+}

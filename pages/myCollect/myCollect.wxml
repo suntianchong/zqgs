@@ -1,0 +1,138 @@
+<!--pages/myCollect/myCollect.wxml-->
+<!--pages/my_publish/my_publish.wxml-->
+<view class='head'>
+  <view class="{{collectType=='job'?'headSselect':''}}" bindtap='selectJob'>岗位</view>
+  <view class="{{collectType=='job'?'':'headSselect'}}" bindtap='selectHouse'>租房</view>
+</view>
+<block wx:if="{{collectType=='job'}}">
+  <view wx:if="{{!jobEmpty}}">
+    <view class='box' wx:for='{{jobList}}' wx:key='index' wx:for-item="item"  data-id='{{item.jobDetail.objectId}}' catchtap='to_detail_job'>
+      <view class='img_box'>
+        <image src='{{item.companyLogo}}'></image>
+      </view>
+      <view class='job_info'>
+        <view class='info_title'>{{item.jobName}}</view>
+        <view class='font28' style='margin-top:10rpx;'>{{item.companyName}}</view>
+        <view class='small_tab  font28' style='margin-top:70rpx;'>
+          <view class='every_tab'>
+            <view class='small_tab_box'>
+              <image src='../img/place.svg'></image>
+            </view> 
+            <view class='del_btn'>{{item.city}}</view>  
+          </view>
+          <view class='every_tab'>
+            <view class='small_tab_box'>
+              <image src='../img/time.svg'></image>
+            </view>
+            <view class='del_btn'>{{item.workTime}}</view>
+          </view>
+          <view class='every_tab' catchtap='del_job' data-id='{{item.objectId}}'>
+            <view class='small_tab_box'>
+              <image src='../img/small_tab_del.png'></image>
+            </view>
+            <view class='del_btn del'>删除</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='noRankList' wx:if="{{jobEmpty}}">
+    <image src='../img/nothing.png' class='noRankListImage'></image>
+    <view class='noRankListTip' style='margin-top:300rpx;'>空空如也</view>
+  </view>
+</block>
+<block wx:if="{{collectType =='house'}}">
+  <view wx:if="{{!houseEmpty}}">
+    <view class='title'>
+      收藏的房源
+    </view>
+
+ <view class='house-rent'  wx:for='{{houseList}}' wx:key='index' wx:for-item="item"  data-id='{{item.houseDetail.objectId}}' catchtap='to_detail_house'>
+
+
+  <view style='display: flex;width:100%;'>
+  <image class='houseImg' src='{{item.houseDetail.housePic[0]}}'></image>
+  <view class='housrMsg'>
+  <view class='houseName'  >{{item.houseDetail.title}}</view>
+  <view class='houseFeature'>{{item.houseDetail.tenancyType}}·{{item.houseDetail.houseType}}</view>
+  <view class='houseCompany'>
+  <view class='company' wx:for='{{item.houseDetail.conmanyLabel}}' wx:key='item'>#{{item}}</view>
+  </view>
+  <view class='houseBottom'>
+  <image src='../img/place.svg'></image>
+  <view class='housePlace'>{{item.houseDetail.address}}</view>
+  <view class='houseRent'>{{item.houseDetail.rentFee}}元/月</view>
+  </view>
+  </view>
+  </view>
+   <view class='small_tab font28 house-small-tab'>
+      <view></view>
+      <view class='every_tab'  catchtap='del_house' data-id='{{item.objectId}}'>
+        <view class='small_tab_box'>
+          <image src='../img/small_tab_del.png'></image>
+        </view>
+        <view class='del_btn del'>删除</view>
+      </view>
+    </view>
+  </view>
+
+
+    
+  </view>
+  <view wx:if="{{!rentEmpty}}">
+    <view class='title'> 
+      收藏的求租
+    </view>
+
+  <view class='rentContent'   wx:for='{{rentList}}' wx:key='index' wx:for-item="item" catchtap='to_detail_rent' data-id='{{item.rentDetail.objectId}}'>
+    <view class='rentContentColumn1'>
+      <view class='rentContentTip'>入住时间</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.rentDetail.enterTime}}</view>
+      <view class='rentContentColumn_right'>
+        <view class='rentContentTip'>求租类型</view>
+        <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.rentDetail.tenancyType}}</view>
+      </view>
+      
+    </view>
+    <view class='rentContentColumn1' style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>求租区域</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.rentDetail.cityArea}}</view>
+      <view class='rentContentColumn_right' wx:if="{{item.rentDetail.tenancyType=='合租'}}">
+        <view class='rentContentTip'>性别要求</view>
+        <view class='rentContentTipContent' style='margin-left:12rpx;'>{{item.rentDetail.sexType}}</view>
+      </view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>理想地点</view>
+      <image  src='../../images/house_place.svg' class='house_place'></image>
+      <view class='rentContentTipContent' style='width:500rpx; letter-spacing: 0;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;'>{{item.rentDetail.address}}</view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'  style='margin-right:12rpx;'>公司标签</view>
+      <view class='company' wx:for='{{item.rentDetail.conmanyLabel}}' wx:key='item'>#{{item}}</view>
+    </view>
+    <view class='rentContentColumn1'  style='  margin-top: 10rpx;'>
+      <view class='rentContentTip'>意向租金</view>
+      <view class='rentContentTipContent' style='margin-left:12rpx;color:#FF4230;'>{{item.rentDetail.rentFee}}</view>
+      <view class='rent-action2'>
+        <view class='small_tab font28 del_rent del'>
+          <view class='every_tab '  catchtap='del_rent' data-id='{{item.objectId}}'>
+            <view class='small_tab_box'>
+              <image src='../img/small_tab_del.png'></image>
+            </view>
+            <view class='del_btn'>删除</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+
+
+  </view>
+  <view class='noRankList' wx:if='{{houseEmpty&&rentEmpty}}'>
+    <image src='../img/nothing.png' class='noRankListImage'></image>
+    <view class='noRankListTip' style='margin-top:300rpx;'>空空如也</view>
+  </view>
+</block>
+

@@ -1,0 +1,150 @@
+.top{
+  height: 163rpx;
+  width: 100%;
+}
+
+.topTip{
+  float: left;
+  font-size: 38rpx;
+  color: #3D3D3D;
+  margin: 50rpx 0rpx 0rpx 24rpx;
+  font-weight:500;
+}
+
+.choseItemWidth{
+  margin-right: 25rpx;
+}
+
+.change{
+  margin: 38rpx 24rpx 0rpx 0rpx;
+  float: right;
+  width: 158rpx;
+  height: 62rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.changeContainer{
+  margin-left: 6rpx;
+  background: #F0F0F0;
+  border-radius: 100rpx;
+  display: flex;
+}
+.house{
+  width: 72rpx;
+  height: 58rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  text-align: center;
+  /* padding: 0rpx 0rpx 8rpx 8rpx; 上右下左*/
+  line-height: 62rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+
+.selected{
+  width: 86rpx;
+  height: 58rpx;
+  color: #3D3D3D;
+  background: #FFFFFF;
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 58rpx;
+  border: 1px solid #BDBDBD;
+  border-radius: 100rpx;
+}
+
+.column{
+  display: flex;
+  height: 88rpx;
+  align-items:center;
+  margin-bottom: 4rpx;
+}
+
+.columnleft{
+  font-size: 30rpx;
+  color: #3D3D3D;
+  width: 154rpx;
+  margin-left: 24rpx;
+}
+
+.columnright{
+  display: flex;
+}
+
+.choseItemSelect{
+  width: 112rpx;
+  height: 54rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid #98c2ff;
+  color: #3185FF;
+  font-size: 28rpx;
+  line-height: 54rpx;
+  text-align: center;
+}
+
+.choseItem{
+  width: 112rpx;
+  height: 54rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid #E3E3E3;
+  color: #999999;
+  font-size: 28rpx;
+  line-height: 54rpx;
+  text-align: center;
+}
+
+.columnright2{
+  display: flex;
+  width: 582rpx;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #8f8f8f;
+  align-items:center;
+}
+
+.columnright2_input1{
+   width: 582rpx;
+   margin-left:20rpx;
+}
+
+.columnright2_input2{
+  width:250rpx;
+  margin-left:20rpx;
+}
+
+.rowRight{
+  height: 20rpx;
+  width: 11rpx;
+  margin-right: 20rpx;
+}
+
+.nextStep{
+  width: 640rpx;
+  height: 88rpx;
+  background-color: #3185FF;
+  color: #ffffff;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 2rpx;
+  position: absolute;
+  bottom: 24rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+
+}
+
+.contactIcon{
+  width: 26rpx;
+
+}
+
+.contactIcon{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 5rpx;
+}
+
+

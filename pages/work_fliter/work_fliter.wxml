@@ -1,0 +1,48 @@
+
+
+<view style='background: #ffffff;'>
+  <view class='top'>
+    <view style='  height: 34rpx;width: 8rpx;background-color: #3185FF;margin-left: 16rpx;'></view>
+    <view style='font-size:32rpx;color:#525A66;margin-left:15rpx;font-weight: bold;'>岗位类型</view>
+  </view>
+
+  <view style='display: flex;margin-top:32rpx;'>
+  
+    <view class='item_content'>
+      <view class="{{itemListIndex[0] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="0">{{itemList[0]}}</view>
+    </view> 
+
+    <view class='item_content'>
+      <view class="{{itemListIndex[1] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="1">{{itemList[1]}}</view>
+    </view>
+
+    <view class='item_content'>
+      <view class="{{itemListIndex[2] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="2">{{itemList[2]}}</view>
+    </view>
+
+    <view class='item_content'>
+      <view class="{{itemListIndex[3] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="3">{{itemList[3]}}</view>
+    </view>
+
+  </view>
+
+  <view style='display: flex;margin-top:29rpx;'>
+
+    <view class='item_content'>
+      <view class="{{itemListIndex[4] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="4">{{itemList[4]}}</view>
+    </view>
+
+    <view class='item_content'>
+      <view class="{{itemListIndex[5] == 1 ? 'selected' : 'item'}}" bindtap='choseItem' data-index="5">{{itemList[5]}}</view>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='clear' bindtap='clear'>清除</view>
+    <view class='shure' bindtap='shure'>确认筛选 <text wx:if="{{choseItemList.length>0}}">({{choseItemList.length}})</text></view>
+  </view>
+
+
+</view>
+
+

@@ -1,0 +1,37 @@
+<view class='top' >
+  <view class='searchColumn'>
+    <image class='work_search' src='../../images/work_search.svg'></image>
+    <input bindinput="searchCom" value='{{searchText}}' auto-focus class='input_search'  placeholder-style="color:#8a9099;font-size:28rpx;width:308rpx;" placeholder="输入搜索关键词" />
+  </view>
+
+  <view class='clear_input' bindtap='clearSearchInput'>清空</view>
+
+</view>
+
+  <view style='height:90rpx;'></view>
+
+  <view wx:if="{{hideChoseColumn==false}}">
+    <view class='inputComText'  wx:if="{{searchText}}" bindtap='choseInpComText'>
+      <image class='searchTextIcon'  src='../../images/row2.svg'></image>
+      搜索“{{searchText}}”
+    </view>
+  </view>
+
+
+  <view wx:if="{{!searchText}}">
+    <view class='searchHistory' wx:if="{{searchHistoryContent_zhiYan.length!=0}}">
+      <view class='searchHistoryTip'>搜索历史</view>
+      <image class='clearSearchHistory' bindtap='clearSearchHistory'  src='../../images/clear_search_history.svg'></image>
+    </view>
+
+    <view class='searchHistoryContent_zhiYan' wx:if="{{searchHistoryContent_zhiYan.length!=0}}" >
+      <view wx:for="{{searchHistoryContent_zhiYan}}" data-index="{{index}}" bindtap='clickSearchHistory'>{{item}}</view>
+    </view>
+  </view>
+
+
+
+ 
+ 
+ 
+ 

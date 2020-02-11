@@ -1,0 +1,44 @@
+<view class='BG'>
+  <view class="title">关于我们</view>
+  <view class='text'>互联网研究院是入职BAT等公司的学长学姐成立的公益社群，帮助学弟学妹们更快的找到质量更高的实习。</view>
+  <view class='text' style='margin-top:10rpx;'>职前公社团队所有成员全部为义务兼职，职前公社发展至今离不开所有兢兢业业、无私付出的团队成员们，也离不开所有支持我们的广大用户！</view>
+  <view class='text'  style='margin-top:10rpx;'>团队成员（按照姓名首字母，不分先后次序）</view>
+
+  <view class='job'>软件研发：</view>
+  <view class='text'> <view style='width:112rpx;'>陈剑：</view>青岛大学</view>
+  <view class='text'><view style='width:112rpx;'>李文杰：</view>金客科技</view>
+  <view class='text'><view style='width:112rpx;'>王建飞：</view>浪潮集团</view>
+  <view class='text'><view style='width:112rpx;'>张新源：</view>沈阳农业大学</view>
+
+  <view class='job'>产品UI</view>
+  <view class='text'><view style='width:112rpx;'>袁文琦：</view>伦敦大学学院</view>
+  <view class='text'><view style='width:112rpx;'>郑剑强：</view>贝贝网</view>
+
+  <view class='job'>产品设计</view>
+  <view class='text'><view style='width:112rpx;'>陈剑：</view>青岛大学</view>
+  <view class='text'><view style='width:112rpx;'>郑剑强：</view>贝贝网</view>
+  <view class='text'><view style='width:112rpx;'>吴润泽：</view>京东</view>
+
+  <view class='job'>产品运营</view>
+  <view class='text'><view style='width:112rpx;'>郭艳：</view>京东</view>
+  <view class='text'><view style='width:112rpx;'>娄婷：</view>百度</view>
+  <view class='text'><view style='width:112rpx;'>李欣：</view>百度</view>
+  <view class='text'><view style='width:112rpx;'>刘晓：</view>腾讯</view>
+  <view class='text'><view style='width:112rpx;'>卜云娜：</view>京东</view>
+
+  <view class='thanks'>--特此鸣谢bmob后端云给予的大力支持--</view>
+</view>
+
+
+<view class='BG2'>
+  <view class="title2">问题反馈</view>
+  <view class='text'>在使用过程中遇到的任何问题都可以添加我们贴心的学长吴润泽</view>
+  <view style=' display: flex;align-items:center;text-align: center;'>
+    <view class='text'>微信：17150318664</view>
+    <view class='copy' bindtap='copy'>点击复制</view>
+  </view>
+  
+</view>
+
+
+ 

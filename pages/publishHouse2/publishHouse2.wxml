@@ -1,0 +1,101 @@
+<view wx:if="{{publishtype=='房源'}}">
+  <view style='background-color: #ffffff;'>
+    <view class="top">
+      <view class='topTip1'>公司标签(非必填)</view>
+      <view class='topTip2'>请标出适合哪些公司的小伙伴住~</view>
+    </view>
+
+    <view class='search' bindtap='searchCompany' >
+      <view class='searchInput' >
+        <view style='color: #BDBDBD;font-size:28rpx;margin-left:30rpx;'>请搜索公司名称</view>
+        <image class='searchIcon'  src='../../images/search_icon.png'></image>
+      </view>
+    </view> 
+ 
+    <view class='label'>
+      <view style='display:flex'>
+        <view class='noLabel' wx:if="{{label1=='#标签1'}}">#{{label1}}</view>
+        <view class='hasLabel' wx:if="{{label1!='#标签1'&&label1!=''}}">#{{label1}}</view>
+        <view class='noLabel' wx:if="{{label2=='#标签2'}}">#{{label2}}</view>
+        <view class='hasLabel' wx:if="{{label2!='#标签2'&&label2!=''}}">#{{label2}}</view>
+        <view class='noLabel' wx:if="{{label3=='#标签3'}}">#{{label3}}</view>
+        <view class='hasLabel' wx:if="{{label3!='#标签3'&&label3!=''}}">#{{label3}}</view>
+      </view>
+      <view class='clearLabel' bindtap='clearLabel'>
+        <image src='../../images/clear.png'></image>
+        <view>清空</view> 
+      </view>
+    </view>
+  </view>
+
+  <view style='background-color: #ffffff;margin-top:20rpx; padding-bottom:30rpx;margin-bottom:150rpx;'>
+    <view style='height:126rpx;font-weight:500;font-size: 38rpx;margin-left: 24rpx;color: #3d3d3d; line-height: 126rpx;'>
+      房源内容
+    </view>
+    <view class='title'>
+      <view style='font-size:30rpx;color:#3d3d3d;margin-left:24rpx;'>标题</view>
+
+      <view class='inputTitle' style='width:{{inputTitleWdith}}rpx;'>
+        <input bindinput="inputTitle" value='{{title}}'  placeholder="输入房源标题" placeholder-style="color: #BDBDBD;font-size:28rpx"/>
+      </view>
+    </view>
+    <textarea class='inputDetail'  maxlength='-1'  cursor-spacing='50'  bindinput="inputDetail" value='{{detail}}' placeholder-style="color: #BDBDBD;font-size:28rpx"  placeholder="请详细描述该房源的信息，如房屋具体详情、出租要求、小区配套等" />
+
+      <view class="gallery">
+          <view class="itemImage" wx:for="{{housePic}}" >
+              <image class="thumb" data-current="{{item}}"  src="{{item}}" />
+              <image class="delete" src="../../images/delete_image.png" data-index="{{index}}" bindtap="delete"></image>
+          </view>
+          <image class="thumb" src="../../images/up_load.png"  bindtap="upImg"/>
+      </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='bottomBlue' bindtap='publishHouse'>发布房源</view>
+  </view>
+</view>
+
+<view wx:if="{{publishtype=='求租'}}">
+  <view style='background-color: #ffffff;'>
+    <view class="top">
+      <view class='topTip1'>公司标签(非必填)</view>
+      <view class='topTip2'>请标出适合哪些公司的小伙伴住~</view>
+    </view>
+
+    <view class='search' bindtap='searchCompany2' style='width:{{searchWdith}}rpx'>
+      <view class='searchInput' style='width:{{searchWdith}}rpx'>
+        <view style='color: #BDBDBD;font-size:28rpx;margin-left:30rpx;'>请搜索公司名称</view>
+        <image class='searchIcon'  src='../../images/search_icon.png'></image>
+      </view>
+    </view> 
+
+    <view class='label'>
+      <view style='display:flex'>
+        <view class='noLabel' wx:if="{{label1=='#标签1'}}">{{label1}}</view>
+        <view class='hasLabel' wx:if="{{label1!='#标签1'&&label1!=''}}">{{label1}}</view>
+        <view class='noLabel' wx:if="{{label2=='#标签2'}}">{{label2}}</view>
+        <view class='hasLabel' wx:if="{{label2!='#标签2'&&label2!=''}}">{{label2}}</view>
+        <view class='noLabel' wx:if="{{label3=='#标签3'}}">{{label3}}</view>
+        <view class='hasLabel' wx:if="{{label3!='#标签3'&&label3!=''}}">{{label3}}</view>
+      </view>
+      <view class='clearLabel' bindtap='clearLabel'>
+        <image src='../../images/clear.png'></image>
+        <view>清空</view>
+      </view>
+    </view>
+  </view>
+
+  <view style='background-color: #ffffff;margin-top:20rpx; padding-bottom:30rpx;margin-bottom:150rpx;'>
+    <view style='height:126rpx;font-weight:500;font-size: 38rpx;margin-left: 24rpx;color: #3d3d3d; line-height: 126rpx;'>
+      备注信息
+    </view>
+
+
+    <textarea  maxlength='-1'  class='inputDetail' value='{{detail2}}'  cursor-spacing='50' bindinput="inputDetail2" placeholder-style="color: #BDBDBD;font-size:28rpx"  placeholder="请尽量详细描述您对房屋的要求~" />
+
+  </view>
+
+  <view class='bottom'>
+    <view class='bottomBlue'  bindtap='publishHouse2'>发布房源</view>
+  </view>
+</view>

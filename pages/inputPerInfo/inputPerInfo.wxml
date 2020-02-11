@@ -1,0 +1,85 @@
+<view class='top'>
+  <view class='topTip'>请完善你的个人信息</view>
+<view class='change'>
+    <view class='changeContainer'>
+      <view class="{{publishTypeIndex == index ? 'selected' : 'house'}}" wx:for="{{publishTypeArr}}" wx:for-item="item" data-index='{{index}}' bindtap='chooseClick'>{{item}}
+      </view>
+    </view>
+  </view>
+</view> 
+
+
+  <view class='column'>
+    <view class='columnleft'>性别</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{sexIndex==0? 'choseItemSelect' : 'choseItem'}}" bindtap='choseSexType' data-index="0">男生</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{sexIndex==1? 'choseItemSelect' : 'choseItem'}}" bindtap='choseSexType' data-index="1">女生</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class='column'>
+    <view class='columnleft'>年龄</view>
+    <view class='columnright'>
+      <view class='choseItemWidth'>
+        <view class="{{ageIndex==0? 'choseItemSelect' : 'choseItem'}}" bindtap='choseAgeType' data-index="0">90后</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{ageIndex==1? 'choseItemSelect' : 'choseItem'}}" bindtap='choseAgeType' data-index="1">95后</view>
+      </view>
+      <view class='choseItemWidth' >
+        <view class="{{ageIndex==2? 'choseItemSelect' : 'choseItem'}}" bindtap='choseAgeType' data-index="2">00后</view>
+      </view>
+      <view class='choseItemWidth'>
+        <view class="{{ageIndex==3? 'choseItemSelect' : 'choseItem'}}" bindtap='choseAgeType' data-index="3">95前</view>
+      </view>
+    </view>
+  </view> -->
+
+  <view class='column'>
+    <view class='columnleft'>学校</view>
+    <view class='columnright2' >
+      <input class='columnright2_input1'  value='{{university}}'  placeholder="请输入学校名称" bindinput="inputUniversity"  placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>公司 <text style='font-size:24rpx;'>(选填)</text></view>
+    <view class='columnright2'>
+      <input   class='columnright2_input1' maxlength="4"  value='{{company}}' placeholder="请输入公司名称(不超过4个字符)" bindinput="inputCompany"  placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+    </view>
+  </view>
+
+  <view class='column'>
+    <view class='columnleft'>职位 <text style='font-size:24rpx;'>(选填)</text></view>
+    <view class='columnright2'>
+      <input   class='columnright2_input1' maxlength="6"  value='{{position}}' placeholder="请输入职位(不超过6个字符)" bindinput="inputPosition"  placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+    </view>
+  </view>
+
+ 
+
+
+  <view class='column'>
+    <view class='columnleft'>联系方式</view>
+    <view class='columnright2'>
+      <input class='columnright2_input2'    value='{{contact}}'  placeholder="输入联系方式" bindinput="contact"   placeholder-style="font-size: 28rpx;color: #8f8f8f;"/>
+      <view style='display:flex;margin-right:20rpx;'>
+        <view style='display:flex;align-items:center;margin-right:20rpx;' bindtap='choseContactType'  data-index="weChat">
+          <image class='contactIcon' wx:if="{{choseContactType=='weChat'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType=='teleNum'}}"  src='../../images/contact_no_select.png'></image>
+          <view>微信</view>
+        </view>
+        <view style='display:flex;align-items:center;' bindtap='choseContactType'  data-index="teleNum">
+          <image class='contactIcon' wx:if="{{choseContactType=='teleNum'}}"  src='../../images/contact_select.png'></image>
+          <image class='contactIcon' wx:if="{{choseContactType=='weChat'}}"  src='../../images/contact_no_select.png'></image>
+          <view>电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='nextStep' bindtap='nextStep'>保存</view>

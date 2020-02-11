@@ -1,0 +1,286 @@
+/* pages/renddetail/renddetail.wxss */
+page{
+  background-color:rgba(0,0,0,0.05);
+  width: 100%;
+  height: 100%;
+}
+.page-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-size: 32rpx;
+  color: #3D3D3D;
+}
+.page-head{
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 24rpx 24rpx 0rpx 24rpx;
+  align-items: center;
+}
+/**头像**/
+.image-view{
+  position: relative;
+  width: 88rpx;
+  height: 88rpx;
+}
+.head-atvar{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+.head-sex{
+  position: absolute;
+  bottom: 5rpx;
+  right: 5rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.head-desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.head-module1{
+  margin-left: 26rpx;
+  width: 388rpx;
+}
+.head-nickname{
+  font-size: 32rpx;
+  color: #3D3D3D;
+  letter-spacing: 0;
+}
+.head-text{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 3rpx;
+}
+.head-module2{
+  align-items: flex-end;
+  width: 200rpx;
+}
+.desc-price{
+  font-size: 28rpx;
+  color: #FF4230;
+  letter-spacing: 0;
+  margin-top: 11rpx;
+}
+.page-title-block{
+  /* margin-top: 16rpx; */
+}
+.page-title{
+  height: 70rpx;
+  padding: 0 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title-title{
+  width: 64rpx;
+  font-size: 32rpx;
+  color: #999999;
+}
+.title-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 8rpx;
+  align-items: center;
+  /* width: 513rpx; */
+}
+.title-content.module-1{
+  margin-left: 12rpx;
+}
+.title-tag1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rpx;
+  border: 1px solid rgba(49,133,255,0.50);
+  font-size: 24rpx;
+  color: #3185FF;
+  letter-spacing: 0;
+  padding: 0rpx 24rpx;
+  margin: 0rpx 8rpx;
+}
+.title-tag2{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF1E0;
+  border-radius: 4rpx;
+  color: #FF662E;
+  letter-spacing: 0;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0rpx 18rpx 0rpx 18rpx;
+  font-size: 24rpx;
+  margin: 0 10rpx;
+}
+.content-loc{
+  margin-left: 24rpx; 
+}
+.content-loc-img{
+  width: 24rpx;
+  height: 24rpx;
+}
+.content-text{
+  margin-left: 13rpx;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+.split-line{
+  /* width: 100%; */
+  height: 1px;
+  margin: 24rpx;
+  background: rgba(0,0,0,0.08);
+}
+.content-main{
+  /* width: 100%; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 62rpx 24rpx 60rpx 24rpx;
+  font-size: 32rpx;
+  color: #3D3D3D;
+  letter-spacing: 0;
+  line-height: 49rpx;
+}
+.page-tips{
+  display: flex;
+  flex-direction: column;
+  padding: 60rpx 24rpx 158rpx 24rpx;
+  background-color: rgba(0,0,0,0.05);
+}
+.tips-title{
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+.tips-content{
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 34rpx;
+}
+/*回到首页按钮*/
+.float-div{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: calc(50% - 90rpx);
+  bottom: 170rpx;
+  z-index: 100;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: white;
+  height: 60rpx;
+  width: 180rpx;
+  background-color: #3185FF;
+  border-radius: 30rpx;
+}
+/*底部tabbar*/
+.desc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/*底部tabbar*/
+.tab-bar{
+  width:100%;
+  height:98rpx;
+  position: fixed;
+  left:0;
+  bottom:0;
+  background:#fff;
+  z-index: 10;
+}
+.tab-bar-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tab-bar-block.block-width{
+  width: 170rpx;
+}
+.tab-bar-block .iconfont{
+  height:60rpx;
+  line-height: 70rpx;
+}
+.font-style1{
+  font-size:56rpx!important;
+}
+.font-style2{
+  font-size:56rpx!important;
+}
+.font-style3{
+  font-size:56rpx!important;
+}
+.tab-bar-text{
+  font-size: 22rpx;
+  color: #666666;
+}
+.hide{
+  display: none;
+}
+.tab-img{
+  width: 48rpx;
+  height: 48rpx;
+}
+.send-btn{
+  width: 40%;
+  height: 98rpx;
+  background-color:#3185FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.send-text{
+  color: white;
+  font-weight: bolder;
+  font-size: 32rpx;
+}
+/*自定义sharebutton样式*/
+.cuz-btn{
+  padding-left: 0rpx!important;
+  padding-right: 0rpx!important;
+  padding: 0rpx!important;
+  border: none!important;
+  margin-left: 0rpx!important;
+  margin-right: 0rpx!important;
+  border-radius: 0!important;
+  background-color: white!important;
+  line-height: 36rpx!important;
+  box-sizing: none!important;
+}
+button::after{
+  padding-left: 0rpx!important;
+  padding-right: 0rpx!important;
+  padding: 0rpx!important;
+  border: none!important;
+  margin-left: 0rpx!important;
+  margin-right: 0rpx!important;
+  border-radius: 0!important;
+  line-height: 36rpx!important;
+  box-sizing: none!important;
+}
+button::before{
+  padding-left: 0rpx!important;
+  padding-right: 0rpx!important;
+  padding: 0rpx!important;
+  border: none!important;
+  margin-left: 0rpx!important;
+  margin-right: 0rpx!important;
+  border-radius: 0!important;
+  background-color: white!important;
+  line-height: 36rpx!important;
+  box-sizing: none!important;
+}

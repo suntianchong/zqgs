@@ -1,0 +1,119 @@
+<view class='greyMask' bindtap='hideMask' wx:if="{{showMask}}"></view>
+
+<view class="top">
+  <image  src='{{zhiYan.publisher.userPic}}'  class='userPic' wx:if="{{zhiYan.anonymous==false}}"></image>
+  <image  src='../../images/admin_pic.jpg'   class='userPic' wx:if="{{zhiYan.anonymous==true}}"></image>
+  <view class='userInfo'>
+    <view class='name_time'> 
+      <text class='name' wx:if="{{zhiYan.anonymous==false}}">{{zhiYan.publisher.nickName}}</text>
+      <text class='name' wx:if="{{zhiYan.anonymous==true}}">匿名用户</text>
+      <text class='time'>{{zhiYan.publishTime}}</text>
+    </view>
+    <view class='otherInfo' wx:if="{{zhiYan.anonymous==false}}">{{zhiYan.publisher.university}}<text wx:if="{{zhiYan.publisher.company}}">·{{zhiYan.publisher.company}}</text><text wx:if="{{zhiYan.publisher.position}}">·{{zhiYan.publisher.position}}</text> </view>
+
+     <view class='otherInfo' wx:if="{{zhiYan.anonymous==true}}">ta什么也不想让你看到</view>
+  </view>
+</view>
+
+
+<view class='content'>{{zhiYan.content}}</view>
+
+  <view class='imagesList' >
+      <image  wx:for="{{zhiYan.images}}" data-currentsrc="{{item}}" wx:key="index"  src='{{item}}' catchtap='previewImg' class='image' hover-stop-propagation='true'></image>
+  </view>
+
+ <view class='line'></view>
+
+<view class='operation'>
+  <view class='like'>
+    <image wx:if="{{!zhiYan.hadLike}}"  bindtap='likeZY' data-hadlike="false"  src='../../images/like.png'></image>
+    <image wx:if="{{zhiYan.hadLike}}"   bindtap='likeZY' data-hadlike="true" src='../../images/hadLike.png'></image>
+    <view style='margin-left: 4rpx;'>{{zhiYan.likeNum}}</view>
+  </view>
+  <view class='share' bindtap='share'>
+    <image  src='../../images/share.png'></image>
+    <view style='margin-left: 4rpx;'>{{zhiYan.shareNum}}</view>
+  </view>
+
+
+</view>
+
+<view class='line2'></view>
+
+<view class='allCommentNum'>全部{{commentNum}}条评论</view>
+
+
+<view class='noComment' wx:if="{{commentList.length==0}}">
+  <image  src='https://bmob-cdn-21786.bmobcloud.com/2019/04/28/aafcd0a74035aa0a8098116f3d093e66.png'></image>
+  <view>快来当第一个评论的人吧~</view>
+</view>
+
+
+<view class='commentItem' wx:for="{{commentList}}" data-index="{{index}}"  bindtap='replyComment'>
+  <view class='firstCommentTop'>
+   
+      <image  class='firstCommentUserPic' src='{{item.publisher.userPic}}'></image>
+
+      <view class='commentUserRight'>
+        <view class='nameLike'>
+          <view class='commentUserInfo' data-id="{{item.objectId}}"   data-nickName="{{item.publisher.nickName}}">{{item.publisher.nickName}} <text wx:if="{{!item.publisher.company}}"> {{item.publisher.university}}</text> <text wx:if="{{item.publisher.company}}">·{{item.publisher.company}} </text> <text wx:if="{{zhiYan.publisher.position}}">·{{item.publisher.position}}</text></view> 
+
+
+          <view class='firstCommentTopRight'  wx:if="{{item.hadLike!=true}}"  catchtap='likeComment'  hover-stop-propagation='true' data-id="{{item.objectId}}" data-hadlike="false"  data-commentlevel="first" data-index="{{index}}"  >
+            <view class='likeCommentNum' >{{item.likeNum}}</view>
+            <image class='likeCommentIcon' src='../../images/like.png'></image>
+          </view>
+
+          <view class='firstCommentTopRight'  wx:if="{{item.hadLike==true}}"  catchtap='likeComment'  hover-stop-propagation='true' data-id="{{item.objectId}}" data-hadlike="true"  data-commentlevel="first" data-index="{{index}}" >
+            <view class='likeCommentNum' >{{item.likeNum}}</view>
+            <image class='likeCommentIcon' src='../../images/hadLike.png'></image>
+          </view> 
+        </view>
+        <view class='commentTime'>刚刚发布</view>
+
+
+
+      </view>
+
+
+  </view>
+  <view class='firstCommentBottom' data-id="{{item.objectId}}"  data-nickName="{{item.publisher.nickName}}" >
+    <text wx:if="{{!item.replyUser}}"> {{item.content}}</text>
+    <text wx:if="{{item.replyUser}}">回复 <text style='color:#999999;'>{{item.replyUser.nickName}}</text>  {{item.content}}</text>
+  </view>
+  
+   <view class='commentLine'></view>
+</view>
+
+
+<view style='height:100rpx;'></view>
+
+<view class='bottom' style="box-shadow:{{showMask?'0rpx 0rpx 0rpx #ffffff;':'0rpx -5rpx 15rpx #f2f2f2'}}" >
+  <input value='{{inputComment}}' class='inputComment' bindinput='inputComment' bindfocus="focus"  focus="{{focus}}" cursor-spacing='20' placeholder-style="color:#c3c4c7;font-size: 24rpx;"placeholder="{{placeholder}}" />
+  <view wx:if="{{!inputComment}}" style='color:#c2c2c2;'>发送</view>
+  <view wx:if="{{inputComment}}"  bindtap='publish' style='color:#3185ff;'>发送</view>
+</view>
+
+  <view class='popup-panel-layer' hidden="{{sharePanelHidden}}" bindtap="closePanel" ></view>
+
+  <view class='popup' animation="{{animationData}}">
+    <view class='popup-panel' hidden="{{sharePanelHidden}}" >
+      <view class='popup-scd-title'>
+        分享到
+      </view>
+      <view class='page-share-main'>
+        <button class='page-fixed-btn' open-type="share" style='margin-left:150rpx;'>
+            <image class='popup-share-group-img' src='../../images/shareWeChatIcon.png'></image>
+            <view class='popup-share-group-text'>微信好友</view>
+        </button>
+        <view class='shareLine1'></view>
+        <button class='page-fixed-btn' > 
+            <image class='popup-share-group-img' src='../../images/sharePosterIcon.png'></image>
+            <view class='popup-share-group-text'>朋友圈海报</view>
+        </button>
+      </view>
+
+       <view class='shareLine2' ></view>
+       <view class='close'  bindtap="closePanel">取消</view>
+    </view>
+  </view>

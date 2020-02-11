@@ -1,0 +1,107 @@
+<!--pages/details/details.wxml-->
+<view class='container detail-container standard-back-color'>
+  <view class='block-1 background-w'>
+    <view class='module-1'>
+      <view class='company-view'>
+        <image class='companyLogo' mode="scaleToFill" src="{{detail.companyLogo}}"></image>
+      </view>
+      <view class='title' bindtap='showActionSheet'>
+        <text class='title-font'>{{detail.jobName}}</text>
+      </view>
+      <view class='desc desc-company'>
+        <text class='desc-font'>{{detail.companyName}}</text>
+      </view>
+    </view>
+    <view class='module-2'>
+      <view>
+        <image class='desc_img padding-right-10' src='../../images/ic_place.png'></image>
+        <text>{{detail.city}} [城市]</text>
+      </view>
+      <view>
+        <image class='desc_img padding-right-10' src='../../images/ic_time.png'></image>
+        <text>{{detail.workTime}}</text>
+      </view>
+      <view class='text-time'>
+        <image class='desc_img padding-right-10' src='../../images/ic_remark.png'></image>
+        <!--<text>{{detail.publishTime}}</text>-->
+        <text wx:if="{{detail.Immediate}}">尽快入职 [是]</text>
+        <text wx:if="{{!detail.Immediate}}">尽快入职 [否]</text>
+      </view>
+    </view>
+    <view class='split-line'></view>
+    <view class='module-3'>
+      <view class='desc'>
+        <view class='desc-font border-right color-deep'>
+          <text class='font-bold'>投递邮箱</text>
+        </view>
+        <view class='desc-content  desc-length desc-email'>
+          <view class='desc-font  desc-email-text' bindtap='sendMail'>{{detail.emailAddress}}</view>
+          <image class='desc_img' src='../../images/ic_copy.png' bindtap='sendMail'></image>
+        </view>
+      </view>
+      <!-- <view class='desc'>
+        <view class='desc-font border-right color-deep'>
+          <text class='font-bold'>远程面试</text>
+        </view>
+        <view wx-if="{{detail.remoteInterview}}" class='desc-font desc-length resume-view'>是</view>
+        <view wx-if="{{!detail.remoteInterview}}" class='desc-font desc-length resume-view'>否</view>
+      </view> -->
+      <view class='desc start-align'>
+        <view class='desc-font border-right color-deep'>
+          <text class='font-bold'>简历名称</text>
+        </view>
+        <view class='desc-font desc-length resume-view'>{{detail.resumeName}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='block-1 background-w'>
+    <view class='title-padding'>
+      <view class='view-title'><text>职位描述</text></view>
+    </view>
+    <view class='split-line'></view>
+    <view class='view-content'>
+      <text>
+        {{detail.jobDescription}}
+      </text>
+    </view>
+  </view>
+  <view class='block-1 background-w'>
+    <view class='title-padding'>
+      <view class='view-title'><text>工作地址</text></view>
+    </view>
+    <view class='split-line'></view>
+    <view class='view-content'>
+      <text>
+          {{detail.workAddress}}
+      </text>
+    </view>
+  </view>
+  <view wx:if="{{sharedIn}}" class='float-div' bindtap='goIndex'>更多职位</view>
+  <view class='desc tab-bar'>
+    <view class='tab-bar-block block-width' bindtap='collectJob'>
+      <!--<text wx:if="{{!hasCollect}}" class='iconfont icon-shoucang font-style1'></text>
+      <text wx:if="{{hasCollect}}" class='iconfont icon-shoucang11 font-style1 color-yellow'></text>-->
+      <image wx:if="{{!hasCollect}}"  src='../img/ic_collect.png' class='tab-img'></image>
+      <image wx:if="{{hasCollect}}"  src='../img/had_collect.png' class='tab-img'></image>
+      <text class='tab-bar-text'>收藏</text>
+    </view>
+    <button class='cuz-btn' open-type='share' plain="true">
+      <view class='tab-bar-block block-width'>
+          <!--<text class='iconfont icon-fenxiang1 font-style2'></text>-->
+          <image src='../img/ic_share.png' class='tab-img'></image>
+          <text class='tab-bar-text'>分享</text>
+      </view>
+    </button>
+    <view class='tab-bar-block block-width' bindtap='getPoster'>
+      <!--<text class='iconfont icon-pengyouquan font-style3'></text>-->
+      <image src='../img/ic_moments.png' class='tab-img'></image>
+      <text class='tab-bar-text'>海报</text>
+    </view>
+    <view class='send-btn' bindtap='sendMail'>
+      <text class='send-text'>复制投递邮箱</text>
+      <view class="triangle" wx-if="{{isAdmin}}">
+          <view style='color:#ffffff;' class='clickNumber'>{{detail.clickNumber}}</view>
+      </view>
+    </view>
+  </view>
+</view>

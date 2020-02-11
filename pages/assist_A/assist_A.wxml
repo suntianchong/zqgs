@@ -1,0 +1,191 @@
+<image class='assistATop' src="{{'https://bmob-cdn-21786.bmobcloud.com/2019/03/05/d682123b403c2b1280bca8e839435d47.png'}}"></image>
+<view class='assistATopTip1'>已有 <text style='font-weight: bold;font-size:35rpx'>{{assistNum}}</text> 人为你助力</view>
+<view wx:if="{{assistNum<50}}" class='assistATopTip2'>距离{{nextPackage}}只差 <text style='font-weight: bold;font-size:32rpx;'>{{lackNum}}</text> 人</view>
+<view wx:if="{{assistNum>=50}}" class='assistATopTip2'>已经拿到全部礼包！</view>
+
+<view class='package_get'>
+  <view style='display:flex;  align-items:center;'>
+    <view class='package_get_tip'>礼包获取情况</view>
+    <view class='refresh' catchtap='refresh'>点击刷新</view>
+  </view>
+  <view class='seeDetail' bindtap='seeDetail'>查看礼包详情</view>
+</view>
+
+ <view class='navigation'>
+    <view class='noNavigation'>
+
+      <view class='hadNavigation' style='width:{{hadNavigationLength}}rpx'></view>
+
+    </view>
+</view>
+
+<view class='navigation_tip1'>
+  <view>初级礼包</view>
+  <view>中级礼包</view>
+  <view>高级礼包</view>
+</view>
+
+<view class='navigation_tip2'>
+  <view>5人助力</view>
+  <view>20人助力</view>
+  <view>50人助力</view>
+</view>
+
+
+
+
+
+<!--获取formid按钮-->
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn_scope'>
+      <form 
+        report-submit 
+        bindsubmit="getFormid">
+        <button 
+          form-type='submit'
+          class='btn'>
+          <view class='btn_scope'>
+            <form 
+              report-submit 
+              bindsubmit="getFormid">
+              <button 
+                form-type='submit'
+                open-type='share'
+                class='btn'>
+                <view class='btn_scope'>
+                  邀请好友助力
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+    </view>
+  </button>
+</form>
+<view class='fill_block'>
+</view>
+
+<form 
+  report-submit 
+  bindsubmit="getFormid"
+  class='form_box'>
+  <button 
+    form-type='submit'
+    class='btn'>
+    <view class='btn2'>
+      <form 
+        report-submit 
+        bindsubmit="getFormid">
+        <button 
+          form-type='submit'
+          class='btn'>
+          <view class='btn2'>
+            <form 
+              report-submit 
+              bindsubmit="getFormid">
+              <button 
+                form-type='submit'
+                class='btn'>
+                <view class='btn2 btn_special' bindtap='createPoster'>
+                  生成海报转发
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+    </view>
+  </button>
+</form>
+<view class='fill_block'>
+</view>
+<!-- <button class="btn2" bindtap='createPoster'>生成海报转发</button> -->
+
+
+<!--引入推荐职位组件开始-->
+<recommendJob></recommendJob>
+<!--引入推荐职位组件结束-->
+
+
+<view class='assistTopPackageBG'>
+  <view class='package1'>
+    <image class='packageImage1' src='../../images/package1.png'></image>
+    <view class='packageImage1Tip1'>初级求职礼包</view>
+    <view class='packageImage1Tip2'>10个G求职&学习资源大放送！你一年的资源我们全包了！</view>
+    <image class='openPackage' bindtap='openPackage'  data-hadget='false'  src='../../images/openPackage.png'
+      wx:if="{{assistNum>=5 && !giftOne}}"
+      data-type='1'></image>
+    <view class='package_font'
+      wx:if="{{assistNum<5}}"> 再加把劲</view>
+
+    <image class='openPackage' bindtap='openPackage'  data-hadget='true'  src='../../images/packageDetail.png'
+      wx:if="{{giftOne}}"
+      data-type='1'></image>
+
+  </view>
+  <view class='package2'>
+    <image class='packageImage2' src='../../images/package2.png'></image>
+    <view class='packageImage1Tip1'>中级求职礼包</view>
+    <view class='packageImage1Tip2'>产品运营学习群等十多个群免费进，还有一对一简历指导~</view>
+    <image class='openPackage'  bindtap='openPackage'  src='../../images/openPackage.png'
+      wx:if="{{assistNum>=20 && !giftTwo}}"
+      data-type='2'></image>
+    <view class='package_font'
+      wx:if="{{assistNum<20}}"> 再加把劲</view>
+
+    <image class='openPackage' bindtap='openPackage' src='../../images/packageDetail.png'
+      wx:if="{{giftTwo}}"
+      data-type='2'></image>
+
+  </view>
+  <view class='package3'>
+    <image class='packageImage3' src='../../images/package3.png'></image>
+    <view class='packageImage1Tip1'>高级求职礼包</view>
+    <view class='packageImage1Tip2'>私人配备产品、运营、设计、开发四位贴身导师。全栈不是梦！</view>
+    <image class='openPackage'  bindtap='openPackage'  src='../../images/openPackage.png'
+      wx:if="{{assistNum>=50 && !giftThree}}"
+      data-type='3'></image>
+    <view class='package_font'
+      wx:if="{{assistNum<50}}"> 再加把劲</view>
+    <image class='openPackage' bindtap='openPackage' src='../../images/packageDetail.png'
+      wx:if="{{giftThree}}"
+      data-type='3'></image>
+  </view>
+</view>
+<image class='assistTopPackageBGImage' src='../../images/assistTopPackageBG.jpg'></image>
+
+
+<!--formid按钮-->
+
+<!--规则组件开始-->
+<recommendRule></recommendRule>
+<!--规则组件结束-->
+
+
+<view class='greyMask' wx:if="{{openPackage1==true||openPackage2==true||openPackage3==true}}"></view>
+<view class='openPackage1' wx:if="{{openPackage1==true}}">
+  <view class="inputMail" >
+    <input bindinput="inputMail" disabled="{{disabledInputMail}}" placeholder-style="line-height: 80rpx;" placeholder="{{inputMailTip}}" />
+    <image bindtap='inputMailSure' src='../../images/inputMailSure.png'></image>
+  </view>
+
+  <image class='openPackage1Image' src='https://bmob-cdn-21786.bmobcloud.com/2019/03/05/f5e696a5409c751b80921e9146d07a34.png'></image>
+  <image class='closePackageImg' bindtap='closePackage' src='../../images/closePackageImg.png'></image>
+</view>
+
+<view class='openPackage2' wx:if="{{openPackage2==true}}">>
+  <image class='openPackage1Image'  data-type='2' bindtap='copyWeChat' src='https://bmob-cdn-21786.bmobcloud.com/2019/03/04/f5ec15f240ba5bdc801e4c94910bb25a.png'></image>
+  <image class='closePackageImg'  bindtap='closePackage' src='../../images/closePackageImg.png'></image>
+</view>
+
+<view class='openPackage3' wx:if="{{openPackage3==true}}">>
+  <image class='openPackage1Image'  data-type='3' bindtap='copyWeChat' src='https://bmob-cdn-21786.bmobcloud.com/2019/03/04/4d475aa64044af1a804dbc92a5ad6d9c.png'></image>
+  <image class='closePackageImg'  bindtap='closePackage' src='../../images/closePackageImg.png'></image>
+</view>

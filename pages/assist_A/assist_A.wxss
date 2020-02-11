@@ -1,0 +1,311 @@
+.assistATop{
+  width: 750rpx;
+  height: 370rpx;
+
+}
+
+.assistATopTip1{
+  font-size: 30rpx;
+  position: absolute;
+  top: 280rpx;
+  left:30rpx;
+  color: #ffffff;
+}
+
+.assistATopTip2{
+  font-size: 24rpx;
+  position: absolute;
+  top: 320rpx;
+  left:30rpx;
+  color: #ffffff;
+}
+
+.btn2{
+    position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 700rpx;
+  height: 100rpx;
+  /* margin-left: 25rpx; */
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  
+  background-color: #ffffff;
+  color:  #ee8325;
+  box-sizing: border-box;
+  
+} 
+.btn_special{
+  border:5rpx solid #ee8325;
+}
+.inputMail{
+  width: 550rpx;
+  height: 80rpx;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 60rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 330rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.inputMail input{
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-left: 30rpx;
+    width: 400rpx;
+}
+
+.inputMail image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+
+}
+
+.package_get{
+  justify-content: space-between;
+  display:flex;
+  margin-top: 30rpx;
+  align-items:center;
+}
+
+.package_get_tip{
+  font-weight: bold;
+  font-size: 30rpx;
+  margin-left: 25rpx;
+}
+
+.refresh{
+  font-size: 22rpx;
+  justify-content: center;
+  width: 100rpx;
+  height: 34rpx;
+  background-color: #d2d2d2;
+  margin-left: 15rpx;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 15rpx;
+  line-height: 34rpx;
+}
+
+.navigation{
+  display:flex;
+  margin-top: 40rpx;
+  align-items:center;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  width: 700rpx;
+  transform: translate(-50%,0);
+
+ }
+
+ .noNavigation{
+   position: relative;
+   width: 100%;
+   height: 15rpx;
+   background-color: #f4cf90;
+   border-radius: 15rpx;
+ }
+
+  .seeDetail{
+    font-size: 24rpx;
+    border-bottom: 1rpx solid #000000;
+    margin-right: 26rpx;
+
+  }
+
+ .hadNavigation{
+    position: absolute;
+    height: 15rpx;
+    background-color: #e98e3d;
+    border-radius: 15rpx;
+ }
+
+
+.navigation_tip1{
+  width: 680rpx;
+  justify-content: space-between;
+  display: flex;
+  font-size: 24rpx;
+  margin-top: 60rpx;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.navigation_tip2{
+  width: 650rpx;
+  justify-content: space-between;
+  display: flex;
+  font-size: 18rpx;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.assistTopPackageBG{
+  width: 750rpx;
+  position: relative;
+  margin-top: 30rpx;
+  height: 490rpx;
+  background-color: #f7d6a3;
+}
+
+
+.package1{
+  top: 14rpx;
+  width: 720rpx;
+  height: 150rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+}
+
+.package2{
+  top: 178rpx;
+  width: 720rpx;
+  height: 150rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+}
+
+.package3{
+  top: 332rpx;
+  width: 720rpx;
+  height: 150rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+  position: absolute;
+}
+
+.packageImage1,.packageImage2,.packageImage3{
+   width: 720rpx;
+  height: 150rpx;
+}
+
+.packageImage1Tip1{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  top: 42rpx;
+  left: 25rpx;
+}
+
+.packageImage1Tip2{
+  font-size: 20rpx;
+  color: #ffffff;
+  position: absolute;
+  top: 86rpx;
+  left: 25rpx;
+}
+
+.openPackage{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 25rpx;
+  font-size: 22rpx;
+  color: #fff;
+  right: 26rpx;
+  line-height: 150rpx;
+}
+.package_font{
+   width: 150rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 150rpx;
+}
+.assistTopPackageBGImage{
+  width: 750rpx;
+  height: 130rpx;
+}
+
+/**
+formid按钮
+
+*/
+.form_box{
+  position: relative;
+  left: 25rpx;
+  top: 38rpx;
+}
+.btn{
+  width: 20rpx;
+  height:20rpx;
+  position: absolute;
+  left: 25;
+  top: 0;
+  overflow:visible;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+.btn::after{
+  border: none;
+  background: #fff;
+}
+.btn_scope{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 700rpx;
+  height: 100rpx;
+  /* margin-left: 25rpx; */
+  border-radius: 50rpx;
+  background: rgb(238,131,37);
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 100rpx
+}
+.fill_block{
+  height: 150rpx;
+  width: 100%;
+}
+
+
+.greyMask{
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  opacity:0.7;
+}
+.openPackage1,.openPackage2,.openPackage3{
+  position: absolute;
+  top: 130rpx;
+  z-index: 1000;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.openPackage1Image{
+  width: 650rpx;
+  height: 852rpx;
+}
+
+.closePackageImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 20rpx;
+}

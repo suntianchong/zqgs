@@ -1,0 +1,660 @@
+page{
+  background: #F5F5F5;
+}
+
+.cityBubble{
+  width: 370rpx;
+  height: 117rpx;
+  position: absolute;
+  top: 100rpx;
+  left: 30rpx;
+  z-index: 999;
+}
+
+.houseTypeBubble{
+  width: 322rpx;
+  height: 117rpx;
+  position: absolute;
+  top: 400rpx;
+  z-index: 999;
+  right: 30rpx;
+}
+
+.head{
+  width: 100%;
+  height: 324rpx;
+  background: #FFFFFF;
+}
+
+.house_bg{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.top_house_bg{
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 40rpx;
+}
+
+
+.head_title1{
+  font-size: 44rpx;
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  top: 108rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+  
+}
+
+.head_title2{
+  font-size: 28rpx;
+  color: #ffffff;
+  position: absolute;
+  top: 181rpx;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.work_Search_address{
+  width: 24rpx;
+  height: 34rpx;
+  margin-left: 25rpx;
+}
+
+.city{
+  color: #ffffff;
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.row_right{
+  width: 10.7rpx;
+  height: 19.5rpx;
+  margin-left: 3rpx;
+}
+
+
+
+
+.searchColumn{
+  width: 562rpx;
+  height: 64rpx;
+  background-color: #ffffff;
+  border-radius: 100rpx;
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.searchColumn2{
+  width: 474rpx;
+  height: 64rpx;
+  background-color: #ffffff;
+  border-radius: 100rpx;
+  margin-left: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.input_search{
+  color:#8a9099;
+  font-size:28rpx;
+  width:390rpx;
+  margin-left: 11rpx;
+}
+
+
+.work_search{
+  width: 34rpx;
+  height: 34rpx;
+  margin-left: 104rpx;
+}
+
+ 
+
+.retrieval{
+  width: 100%;
+  height: 102rpx;
+  background: #FFFFFF;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #f2f3f5;
+    z-index: 998;
+}
+
+
+.retrieval_top{
+  width: 100%;
+  height: 102rpx;
+  background: #FFFFFF;
+  display: flex;
+  position: fixed;
+  top: 0rpx;
+  z-index: 998;
+  align-items: center;
+  justify-content: space-between;
+   border-bottom: 2rpx solid #f2f3f5;
+}
+
+
+
+
+
+
+
+.rent{
+  height: 100%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.area{
+  height: 100%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color1{
+  color: #3185FF
+}
+.tendency{
+  height: 100%;
+  padding-left: 24rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color{
+  color: #3185FF
+}
+.change{
+  height: 100%;
+  padding-right: 24rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.changeContainer{
+  width: 158rpx;
+  height: 62rpx;
+  margin-left: 6rpx;
+  background: #F0F0F0;
+  border-radius: 100rpx;
+  display: flex;
+}
+.house{
+  width: 72rpx;
+  height: 58rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  text-align: center;
+  /* padding: 0rpx 0rpx 8rpx 8rpx; 上右下左*/
+  line-height: 62rpx;
+  color: #999999;
+  letter-spacing: 0;
+}
+.selected{
+  width: 86rpx;
+  height: 58rpx;
+  color: #3D3D3D;
+  background: #FFFFFF;
+  font-family: PingFangSC-Medium;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 58rpx;
+  border: 1px solid #BDBDBD;
+  border-radius: 100rpx;
+}
+.retrieval image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 5rpx;
+}
+
+.retrieval_top image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 5rpx;
+}
+
+
+
+
+
+.areaDetail{
+    width: 100%;
+    padding-bottom: 43rpx;
+    display: flex;
+    background: #fff;
+    position: absolute;
+    top: 104rpx;
+    z-index: 999;
+}
+
+.areaDetailLeft{
+  width: 40%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #3D3D3D;
+  margin-left: 10%;
+  margin-top: 46rpx;
+}
+
+.areaDetailRight{
+  width: 40%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #3D3D3D;
+  margin-right: 10%;
+  margin-top: 46rpx;
+}
+.areaDetail .areaChoose{
+  height: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3D3D3D;
+}
+.areaDetail .publishTypeArr{
+  height: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3185FF;
+}
+.rentDetail{
+    width: 100%;
+    height: 470rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background: #fff;
+    position: absolute;
+    top: 104rpx;
+    z-index: 999;
+}
+.rentDetail .rentChoose{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3D3D3D;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 46rpx;
+}
+.rentDetail .publishTypeArr{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3185FF;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 46rpx;
+}
+
+.tendencyDetail{
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background: #fff;
+    position: absolute;
+    top: 104rpx;
+    z-index: 999;
+}
+
+.tendencyDetail .tendencyChoose{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3D3D3D;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 46rpx;
+}
+.tendencyDetail .publishTypeArr{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3185FF;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 46rpx;
+}
+
+
+
+
+
+
+
+/* 遮罩 */
+.tendencyMarkLayer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 99
+}
+.areaMarkLayer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 99
+}
+.rentMarkLayer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 99
+}
+
+.userInfoColumn{
+  padding: 36rpx 24rpx 32rpx 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.userInfoColumnRightTop{
+  display: flex;
+}
+
+.userInfoColumnRight{
+  margin-left: 24rpx;
+}
+
+.rentContentColumn1{
+  display: flex;
+  font-size: 32rpx;
+  align-items: center; 
+
+}
+
+
+
+
+.triangle{
+  width:0px;
+  height:0px;
+  position: absolute;
+  top: -25rpx;
+  left: 34rpx;
+  border-right:20rpx solid  rgba(0,0,0,0);
+  border-bottom:30rpx solid #F7F8FA;
+  border-left:20rpx solid  rgba(0,0,0,0);
+  }
+
+.rentContent{
+  position: relative;
+  width: 678rpx;
+  margin-right: auto;
+  padding: 24rpx;
+  margin-left: auto;
+  background-color: #F7F8FA;
+}
+
+.rentContentTip{
+  color: #B8C0CC;
+}
+
+.rentContentColumn_right{
+  position: absolute;
+  left: 420rpx;
+  display: flex;
+}
+
+.rentContentTipContent{
+  color: #525A66;
+}
+
+.publishTime{
+  color: #B8C0CC;
+  font-size: 24rpx;
+  position: absolute;
+  right: 24rpx;
+}
+
+.userName{
+  font-size: 28rpx;
+  color: #525a66;
+  margin-bottom: 5rpx;
+}
+
+.userPic{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.sex{
+  width: 28rpx;
+  height: 28rpx;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.sexCompany{
+  font-size: 24rpx;
+  color: #b8c0cc;
+  margin-top: 5rpx;
+}
+
+
+.main-house{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 20rpx;
+}
+
+.line1{
+  height: 2rpx;
+  width: 722rpx;
+  margin-left: 24rpx;
+  background: #f2f3f5;
+  margin-top: 37rpx;
+}
+
+ .house-rent{
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5rpx;
+
+}
+.houseImg{
+  width: 220rpx;
+  border-radius: 8rpx;
+  height: 186rpx;
+  margin-left: 24rpx;
+  position: relative;
+}
+
+.mark{
+  width: 66rpx;
+  height: 39rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  left: 24rpx;
+  border-top-left-radius: 8rpx;
+}
+
+.houseFeature{
+  color: #7A8799;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+
+.house_place{
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 12rpx;
+}
+
+
+ .housrMsg{
+  width: 482rpx;
+  margin-left: 18rpx;
+  position: relative;
+}
+ .houseName{
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #525A66;
+  letter-spacing: 0;
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ .houseCompany{
+  height: 36rpx;
+  margin-top: 12rpx;
+  display: flex
+}
+.company{
+  height: 36rpx;
+  margin-right: 12rpx;
+  padding: 4rpx 10rpx 4rpx 10rpx;
+  background: #FFF1E0;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  text-align: center;
+  color: #FF662E;
+  letter-spacing: 0;
+  line-height: 36rpx;
+}
+.houseBottom{
+  height: 40rpx;
+  margin-top:17rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+ .houseBottom image{
+  width: 26rpx;
+  height: 26rpx;
+}
+ .houseBottom .housePlace{
+  width: 270rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 28rpx;
+  margin-left: 13rpx;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ .houseRent{
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #FF4230;
+  letter-spacing: 0;
+  position: absolute;
+  right: 24rpx;
+}
+
+.main-rent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 20rpx;
+}
+ .rent-house{
+  border-radius: 5rpx;
+  background: #FFFFFF;
+  position: relative;
+  padding-bottom: 24rpx;
+  width: 100%;
+}
+
+
+
+ .rentPlacedeail{
+  width: 666rpx;
+  /* height: 80rpx; */
+  margin-left: 24rpx;
+  margin-top: 8rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #3D3D3D;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+  overflow: hidden; 
+}
+
+
+
+.getUserInfo{
+  position: fixed;
+  right: 15rpx;
+  bottom: 30rpx;
+  padding: 0;
+}
+
+
+
+/* 发布按钮 */
+
+.getUserInfo image{
+  width: 194rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+
+.noRankListImage{
+  width: 244rpx;
+  height: 287rpx;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 220rpx;
+}
+
+
+.noRankListTip{
+  font-size: 30rpx;
+  color: #747373;
+  text-align: center;
+  margin: 20rpx;
+}
+
+
+.cancelSearch{
+  font-size: 28rpx;
+  color: #ffffff;
+  text-align: center;
+  width: 104rpx;
+}

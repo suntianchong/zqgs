@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_跳转箭头</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-137.000000, -169.000000)">
+            <g id="筛选栏" transform="translate(0.000000, 128.000000)">
+                <g id="位置" transform="translate(24.000000, 34.000000)">
+                    <g id="ic_跳转箭头" transform="translate(106.000000, 5.000000)">
+                        <rect id="Rectangle-314" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M17.4396364,3.70403319 C17.8189975,3.32467215 17.8243646,2.68614 17.4338403,2.29561571 C17.0405934,1.90236875 16.4127461,1.90249642 16.0254229,2.28981963 L7.28590864,11.0293338 C7.09716652,11.218076 7.00100003,11.4709714 7.00010595,11.7255589 C6.99633611,11.9869873 7.09319619,12.2392428 7.28590864,12.4319553 L16.0254229,21.1714695 C16.4047839,21.5508305 17.0433161,21.5561977 17.4338403,21.1656734 C17.8270873,20.7724264 17.8269596,20.1445791 17.4396364,19.7572559 L9.41302506,11.7306446 L17.4396364,3.70403319 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(12.364728, 11.728639) rotate(-180.000000) translate(-12.364728, -11.728639) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

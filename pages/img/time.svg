@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_列表时间</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="首页" transform="translate(-339.000000, -729.000000)" fill="#B8C0CC">
+            <g id="card1" transform="translate(0.000000, 591.000000)">
+                <g id="Group-5" transform="translate(338.000000, 136.000000)">
+                    <g id="ic_时间" transform="translate(0.000000, 1.000000)">
+                        <g id="Group-36" transform="translate(1.000000, 1.000000)">
+                            <path d="M13,12 L13,7 C13,6.44771525 12.5522847,6 12,6 C11.4477153,6 11,6.44771525 11,7 L11,12 L11,13 C11,13.5522847 11.4477153,14 12,14 L18,14 C18.5522847,14 19,13.5522847 19,13 C19,12.4477153 18.5522847,12 18,12 L13,12 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z" id="ic_列表时间"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

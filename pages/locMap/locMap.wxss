@@ -1,0 +1,22 @@
+/* pages/locMap/locMap.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.page-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-size: 32rpx;
+  color: #3D3D3D;
+}
+.page-section{
+  width: 100%;
+  height: 100%;
+}
+.map-view{
+  width: 100%;
+  height: 100%;
+}

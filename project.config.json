@@ -1,0 +1,148 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wx547ea2b072a90fd3",
+	"projectname": "zqgs",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 14,
+			"list": [
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/searchCompany/searchCompany",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/main/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的发布",
+					"pathName": "pages/my_publish/my_publish",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/myCollect/myCollect",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "求租详情界面",
+					"pathName": "pages/renddetail/renddetail",
+					"query": "object=66f5e025b5"
+				},
+				{
+					"id": 5,
+					"name": "租房详情界面",
+					"pathName": "pages/publishdetail/publishdetail",
+					"query": "object=4f514de5fe&share=true"
+				},
+				{
+					"id": 6,
+					"name": "举报页面编译",
+					"pathName": "pages/tipsOff/tipsOff",
+					"query": "houseId=d97bc9498c&userId=857c61d1ad&tipUserId=403370e2bb"
+				},
+				{
+					"id": -1,
+					"name": "我的收藏界面",
+					"pathName": "pages/myCollect/myCollect",
+					"query": "houseId=d97bc9498c&userId=857c61d1ad&tipUserId=403370e2bb"
+				},
+				{
+					"id": 8,
+					"name": "职位详情页",
+					"pathName": "pages/details/details",
+					"query": "id='+‘2772f4f08e’+\"&shared=true\""
+				},
+				{
+					"id": -1,
+					"name": "职位详情页",
+					"pathName": "pages/details/details",
+					"query": "id=2772f4f08e&shared=true"
+				},
+				{
+					"id": -1,
+					"name": "公告编译页",
+					"pathName": "pages/notice/notice",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "助理",
+					"pathName": "pages/assist_A/assist_A",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "助理b",
+					"pathName": "pages/assist_B/assist_B",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试分享",
+					"pathName": "pages/assist_B/assist_B",
+					"query": "id=6c0c01798b",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "助力页",
+					"pathName": "pages/assist_B/assist_B",
+					"query": "id=e8763c066c&openId=ouulc5Vfekv-SA6PGNtrYYfFBlfg",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,9 @@
+
+
+  <canvas class='poster' canvas-id="shareCanvas"></canvas>
+
+  <view class='bottom'>
+    <view class='savePoster' bindtap='savePoster'>保存到手机</view>
+  </view> 
+ 
+  

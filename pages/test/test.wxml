@@ -1,0 +1,6 @@
+<form bindsubmit='commentSubmit'>
+  <view class='text_box'>
+    <textarea fixed='true' contenteditable="true" contenteditable="true" auto-height="true" class='weui-textarea' name='commentValue' placeholder='评论' placeholder-style='font-size:30rpx;' maxlength='50' style='background-color: white'></textarea>
+  </view>
+  <button form-type='submit' class='textarea_btn'>发送</button>
+</form>

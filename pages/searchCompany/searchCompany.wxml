@@ -1,0 +1,27 @@
+<view class="top">
+  <view class='searchColumn'>
+     <image class='searchIcon'  src='../../images/search_icon.png'></image>
+     <input bindinput="inputCompany" placeholder="搜索公司名称" placeholder-style="color: #bfbfbf;" auto-focus/>
+  </view>
+
+    <view class="loading_box_bottom" wx:if="{{searching}}">
+      <view class="loading3_bottom loading3_1_bottom"></view>
+      <view class="loading3_bottom loading3_2_bottom"></view>
+      <view class="loading3_bottom loading3_3_bottom"></view>
+    </view>
+
+  <view class='searchResult'>
+    <view class='item' wx:for="{{searchResult}}"  bindtap='choseCompany' data-index="{{index}}">
+      <image class='row'  src='../../images/row.png'></image>
+      <image class='logo'  src='{{item.logo}}'></image>
+      <view class='name'>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='noSearchResult' wx:if="{{noSearchResult}}">
+    <view class='noSRTip'>搜索结果</view>
+    <view class='noSRTip2'>您输入的公司暂未录入我系统，请添加管理员微信进行反馈，点击下方按钮自动复制微信号码</view>
+    <view class='weChatNum'>微信号：17150318664</view>
+    <view class='copy' bindtap='copy'>点击复制</view>
+  </view>
+</view>

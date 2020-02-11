@@ -1,0 +1,38 @@
+page{
+  background: #fafafa;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.08);
+} 
+.container1 .cityContainer{
+  margin-top: 36rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container1 .cityContainer .cityName{
+  width: 212rpx;
+  height: 74rpx;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin-left: 28rpx;
+  margin-bottom: 36rpx;
+  color: #666666; 
+  border: 1px solid #666666; 
+}
+.container1 .cityContainer .selected{
+  width: 212rpx;
+  height: 74rpx;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin-left: 28rpx;
+  margin-bottom: 36rpx;
+  color: #3185FF;
+  border: 1rpx solid #3185FF;
+}

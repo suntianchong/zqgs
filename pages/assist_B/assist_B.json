@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "职前助推器",
+  "navigationBarBackgroundColor": "#eec37b",
+  "usingComponents": {
+    "recommendJob": "/components/recommendJob/recommendJob",
+    "recommendRule": "/components/recommendRule/recommendRule"
+  }
+}

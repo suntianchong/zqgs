@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_地点 copy 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="租房" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="求租" transform="translate(-192.000000, -843.000000)">
+            <g id="list1--copy" transform="translate(0.000000, 554.000000)">
+                <g id="Group-3" transform="translate(192.000000, 279.000000)">
+                    <g id="ic_地点" transform="translate(0.000000, 10.000000)">
+                        <rect id="Rectangle-8-Copy-3" fill="#4A4A4A" opacity="0" x="0" y="0" width="26" height="26"></rect>
+                        <g id="Group-36" transform="translate(3.000000, 1.000000)" fill="#525A66">
+                            <path d="M10,25 C8.4771525,25 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 11.5228475,25 10,25 Z M10,14 C12.209139,14 14,12.209139 14,10 C14,7.790861 12.209139,6 10,6 C7.790861,6 6,7.790861 6,10 C6,12.209139 7.790861,14 10,14 Z" id="Combined-Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

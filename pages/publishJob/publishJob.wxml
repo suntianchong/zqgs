@@ -1,0 +1,110 @@
+<view class="{{showInputFarm==true?'hiddenPage':'page'}}">
+  <view class='columnGray'>基本信息</view>
+  <view class='column' bindtap='inputCompany'>
+    <view class='columnLeft'>公司名称</view>
+    <view class='columnRight'>{{inputCompanyName}}
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+   <view class='column' bindtap='showInputFarm' data-click="inputJobName">
+    <view class='columnLeft' data-click="inputJobName">职位名称</view>
+    <view class='columnRight' data-click="inputJobName">
+      {{inputJobName}}
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view>
+
+  <picker bindchange="choseJobType" style='width:100%;height: 88rpx;' value="{{jobTypeIndex}}" range="{{jobTypeArray}}">
+    <view class='column'>
+        <view class='columnLeft'  >职位类型</view>
+        <view class='columnRight' >
+          {{choseJobType}}
+          <image class='rowRight'  src='../../images/row_right.png'></image>
+        </view>
+    </view>
+  </picker>  
+ 
+  <picker bindchange="choseCityType" style='width:100%;height: 88rpx;' value="{{cityTypeIndex}}" range="{{cityTypeArray}}">
+    <view class='column'>
+      <view class='columnLeft'>城市</view>
+      <view class='columnRight'>{{choseCityType}}
+        <image class='rowRight'  src='../../images/row_right.png'></image>
+      </view>
+    </view> 
+  </picker>
+
+  <!-- <view class='column'>
+    <view class='columnLeft'>远程面试</view>
+    <view class='columnRight'>
+       <switch bindchange="switch1Change" color="#3185FF"/>
+    </view>
+  </view>  -->
+  
+  <view class='column'>
+    <view class='columnLeft'>尽快入职</view>
+    <view class='columnRight'>
+      <switch checked bindchange="switch2Change" color="#3185FF"/>
+    </view>
+  </view> 
+
+  <picker bindchange="choseCycleTime" style='width:100%;height: 88rpx;' value="{{cycleTimeIndex}}" range="{{cycleTimeArray}}">
+    <view class='column'>
+      <view class='columnLeft'>实习周期</view>
+      <view class='columnRight'>{{choseCycleTime}}
+        <image class='rowRight'  src='../../images/row_right.png'></image>
+      </view>
+    </view>
+  </picker>
+
+  <view class='column' bindtap='showInputFarm' data-click="inputMailAddress">
+    <view class='columnLeft' data-click="inputMailAddress">简历投递邮箱</view>
+    <view class='columnRight' data-click="inputMailAddress">{{inputMailAddress}}
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view> 
+
+  <view class='column' bindtap='showInputFarm' data-click="resumeName">
+    <view class='columnLeft'  data-click="resumeName">简历命名</view>
+    <view class='columnRight'  data-click="resumeName">{{resumeName}}
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view> 
+  <view class='column' bindtap='showInputFarm' data-click="workAddress">
+    <view class='columnLeft'  data-click="workAddress">工作地址</view>
+    <view class='columnRight'  data-click="workAddress">{{workAddress}}
+      <image class='rowRight'  src='../../images/row_right.png'></image>
+    </view>
+  </view> 
+
+  <view class='columnGray'>职位描述</view>
+
+  <view class='jobSummary' bindtap='showInputFarm' data-click="jobSummary">
+    <!-- <textarea cursor-spacing='250'    maxlength='-1' style='width:100%;height:500rpx;z-index:9;' bindinput="jobSummary" placeholder="工作概要、申请要求及福利等工作概要等"  value='{{jobSummary}}'/> -->
+    {{jobSummary}}
+    <view style='height:200rpx;'bindtap='showInputFarm' data-click="jobSummary"></view>
+  </view>
+
+  <view class='submit' wx:if="{{showInputFarm==false}}" bindtap='submit'>提交</view>
+
+
+  <view class='hidePage' wx:if="{{showInputFarm==true}}"></view>
+  
+
+   <view class='inputFrame' wx:if="{{showInputFarm==true}}">
+    <view class='inputFrameTitle'>{{inputFarmTitle}}</view>
+    <image class='closeInputFrame' bindtap='closeInputFarm'  src='../../images/close_input_frame.png'></image>
+    <view class='inputFrameContent'>
+       <textarea class='inputColumn'  cursor-spacing='50'  maxlength='{{maxlength}}' value='{{textareaValue}}' bindinput="inputFrame"  bindblur="bindTextAreaInput" placeholder="{{inputFarmPlaceholder}}" />
+    </view>
+    <view class='inputFrameBottom'>
+      <view class='inputFrameBottomLeft'>
+        <view class='clear' bindtap='clearInput'>清除</view>
+      </view>
+      <view class='inputFrameBottomRight'>
+        <view class='finish' bindtap='inputFinish'>完成</view>
+      </view>
+    </view>
+   </view> 
+
+</view>

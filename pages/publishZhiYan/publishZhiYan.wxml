@@ -1,0 +1,33 @@
+
+
+<textarea bindinput='inputContent' placeholder-style="  font-size: 32rpx;color: #c3c4c7;" maxlength='-1' class='inputContent' placeholder="有什么想说的，请尽管职言" />
+
+
+
+
+
+
+
+  <view class='anonymous'>
+    <image class="choseAnonymousIcon" wx:if="{{anonymous==false}}" src="../../images/unChoseAnonymous.png" data-index="false" bindtap="choseAnonymous"></image>
+    <image class="choseAnonymousIcon" wx:if="{{anonymous==true}}" src="../../images/choseAnonymous.png" data-index="true" bindtap="choseAnonymous"></image>
+    <view wx:if="{{anonymous==false}}" data-index="false" bindtap="choseAnonymous">匿名发布</view>
+    <view wx:if="{{anonymous==true}}"  data-index="true"  bindtap="choseAnonymous">匿名发布</view>
+  </view>
+ 
+
+ 
+<view class='line'></view>
+
+
+<view class="gallery">
+  <view class="itemImage" wx:for="{{images}}" >
+      <image class="thumb" data-current="{{item}}" src="{{item}}" />
+      <image class="delete" src="../../images/delete_image.png" data-index="{{index}}" bindtap="delete"></image>
+  </view>
+  <image class="thumb" wx:if="{{images.length<=2}}"  src="../../images/up_load.png"  bindtap="upImg"/>
+</view>
+
+
+ 
+<view class='publish' bindtap='publish'>立即发布</view>

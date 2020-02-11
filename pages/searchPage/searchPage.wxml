@@ -1,0 +1,30 @@
+<view class='top' >
+  <view class='searchInput'>
+    <input bindinput="searchCom" auto-focus value='{{searchText}}' style='color: #BDBDBD;font-size:28rpx'  placeholder="请搜索公司名称或地点关键词" placeholder-style="color: #BDBDBD;font-size:28rpx"/>
+    <image class='searchIcon' wx:if="{{!searchText}}"  src='../../images/search_icon.png'></image>
+    <image class='searchIcon' bindtap='clearSearchInput' wx:if="{{searchText}}"  src='../../images/clear_search_input.png'></image>
+  </view> 
+</view>
+
+  <view style='height:90rpx;'></view>
+
+  <view wx:if="{{hideChoseColumn==false}}">
+    <view class='inputComText'  wx:if="{{searchText}}" bindtap='choseInpComText'>
+      <image class='searchTextIcon'  src='../../images/row2.svg'></image>
+      搜索“{{searchText}}”
+    </view>
+  </view>
+
+
+  <view wx:if="{{!searchText}}">
+    <view class='searchHistory' wx:if="{{searchHistoryContent.length!=0}}">
+      <view class='searchHistoryTip'>搜索历史</view>
+      <image class='clearSearchHistory' bindtap='clearSearchHistory'  src='../../images/clear_search_history.svg'></image>
+    </view>
+
+    <view class='searchHistoryContent' wx:if="{{searchHistoryContent.length!=0}}" >
+      <view wx:for="{{searchHistoryContent}}" data-index="{{index}}" bindtap='clickSearchHistory'>{{item}}</view>
+    </view>
+  </view>
+
+  
